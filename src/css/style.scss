@@ -1,0 +1,82 @@
+// Imports
+@import "lib/normalize";
+
+// Variables
+$font-size: 1rem;
+
+// Main
+body {
+    font-family: "adobe-garamond-pro", serif;
+    font-size: $font-size;
+    line-height: 1.618;
+    font-weight: 300;
+    position: fixed;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background-color: #F5F7FA;
+    box-shadow: inset 0 0 0 40px #fff;
+    color: #2c3e50;
+}
+
+h1 {
+    font-family: "ambroise-std", serif;
+    font-weight: 400;
+    font-size: $font-size * 4;
+    margin: 0;
+    line-height: 1;
+}
+
+.content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 40em;
+}
+
+p {
+    font-size: 1.25em;
+    margin: 0;
+
+    &.about {
+        font-style: italic;
+        font-size: 1em;
+        margin-top: 2rem;
+        color: #555;
+    }
+}
+
+a {
+    color: #444;
+    text-decoration: none;
+
+    &:hover {
+        border-bottom: 1px solid #444;
+    }
+}
+
+.cross {
+    width: 1.5rem;
+    height: 1px;
+    display: block;
+    margin: 2rem auto;
+    position: relative;
+
+    &:before, &:after {
+        content: '';
+        display: block;
+        width: 1.5rem;
+        height: 1px;
+        background-color: #444;
+        position: absolute;
+        top: 0;
+    }
+
+    &:before {
+        transform: rotate(45deg);
+    }
+
+    &:after {
+        transform: rotate(-45deg);
+    }
+}
