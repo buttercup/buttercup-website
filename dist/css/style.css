@@ -179,8 +179,6 @@ table {
 
 input[type="search"] {
   -webkit-appearance: textfield;
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   box-sizing: content-box; }
   input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
     -webkit-appearance: none; }
@@ -214,7 +212,9 @@ h1 {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   text-align: center;
   width: 40em;
   box-sizing: border-box; }
@@ -225,8 +225,21 @@ p {
   p.about {
     font-style: italic;
     font-size: 1em;
-    margin-top: 2rem;
     color: #555; }
+  p.social {
+    margin-top: 2rem; }
+    p.social > a {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      border: none !important;
+      margin: 0 3px; }
+      p.social > a.twitter {
+        background-image: url(../img/twitter.svg); }
+      p.social > a.github {
+        background-image: url(../img/github.svg); }
 
 a {
   color: #444;
@@ -249,15 +262,22 @@ a {
     position: absolute;
     top: 0; }
   .cross:before {
-    transform: rotate(45deg); }
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg); }
   .cross:after {
-    transform: rotate(-45deg); }
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg); }
 
 @media all and (max-width: 800px) {
   .content {
+    width: -webkit-calc(100% - 80px);
     width: calc(100% - 80px);
     left: 40px;
-    transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+        -ms-transform: translate(0, -50%);
+            transform: translate(0, -50%);
     padding: 0 30px; } }
 
 @media all and (max-width: 400px) {
@@ -267,6 +287,7 @@ a {
   h1 {
     font-size: 3rem; }
   .content {
+    width: -webkit-calc(100% - 20px);
     width: calc(100% - 20px);
     left: 10px;
     padding: 0 20px; } }

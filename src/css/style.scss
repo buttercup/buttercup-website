@@ -42,8 +42,29 @@ p {
     &.about {
         font-style: italic;
         font-size: 1em;
-        margin-top: 2rem;
         color: #555;
+    }
+
+    &.social {
+        margin-top: 2rem;
+
+        > a {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            border: none !important;
+            margin: 0 3px;
+
+            &.twitter {
+                background-image: url(../img/twitter.svg);
+            }
+
+            &.github {
+                background-image: url(../img/github.svg);
+            }
+        }
     }
 }
 

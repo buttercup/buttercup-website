@@ -1,7 +1,7 @@
 /* global module, require */
 
 module.exports = function(grunt) {
-    "use strict";
+    'use strict';
 
     require('load-grunt-tasks')(grunt);
 
@@ -11,10 +11,25 @@ module.exports = function(grunt) {
             options: {
                 sourceMap: false
             },
-            website: {
+            dist: {
                 files: {
                     'dist/css/style.css': 'src/css/style.scss'
                 }
+            }
+        },
+
+        postcss: {
+            options: {
+                map: false,
+                processors: [
+                    require('autoprefixer')({
+                        browsers: ['last 5 versions']
+                    })
+                ]
+            },
+            dist: {
+                src: 'dist/css/style.css',
+                dest: 'dist/css/style.css'
             }
         },
 
@@ -24,15 +39,16 @@ module.exports = function(grunt) {
             },
             styles: {
                 files: ['src/css/**/*.scss'],
-                tasks: ['sass']
+                tasks: ['sass', 'postcss']
             }
         }
     });
 
-    grunt.registerTask("default", ["build", "watch"]);
+    grunt.registerTask('default', ['build', 'watch']);
 
-    grunt.registerTask("build", [
-        "sass"
+    grunt.registerTask('build', [
+        'sass',
+        'postcss'
     ]);
 
 };
