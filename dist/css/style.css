@@ -272,7 +272,6 @@ a {
 
 @media all and (max-width: 800px) {
   .content {
-    width: -webkit-calc(100% - 80px);
     width: calc(100% - 80px);
     left: 40px;
     -webkit-transform: translate(0, -50%);
@@ -287,7 +286,6 @@ a {
   h1 {
     font-size: 3rem; }
   .content {
-    width: -webkit-calc(100% - 20px);
     width: calc(100% - 20px);
     left: 10px;
     padding: 0 20px; } }

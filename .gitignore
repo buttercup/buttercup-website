@@ -1,11 +1,9 @@
-### JetBrains
 *.iml
 .idea/
 
-### OSX template
 .DS_Store
 .AppleDouble
 .LSOverride
 
-### Node
 node_modules
+dist

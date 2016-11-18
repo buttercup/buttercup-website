@@ -1,5 +1,3 @@
-/* global module, require */
-
 module.exports = function(grunt) {
     'use strict';
 
@@ -40,13 +38,40 @@ module.exports = function(grunt) {
             styles: {
                 files: ['src/css/**/*.scss'],
                 tasks: ['sass', 'postcss']
+            },
+            assets: {
+                files: ['src/index.html', 'src/img/**'],
+                tasks: ['copy']
+            }
+        },
+
+        connect: {
+            server: {
+                options: {
+                    port: 3000,
+                    base: 'dist'
+                }
+            }
+        },
+
+        copy: {
+            main: {
+                expand: true,
+                cwd: 'src',
+                src: ['index.html', 'img/**'],
+                dest: 'dist/',
             }
         }
     });
 
-    grunt.registerTask('default', ['build', 'watch']);
+    grunt.registerTask('default', [
+        'connect',
+        'build',
+        'watch'
+    ]);
 
     grunt.registerTask('build', [
+        'copy',
         'sass',
         'postcss'
     ]);
