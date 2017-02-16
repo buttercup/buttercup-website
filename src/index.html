@@ -5,37 +5,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <script src="https://use.typekit.net/asd4egi.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
 </head>
 <body>
-    <section class="content">
-        <h1>Buttercup.</h1>
-        <span class="cross"></span>
-        <p>
-            We didn’t like the existing password managers, so we decided to make our own. Buttercup is an
-            open-source, free and cross-platform password management app, available as an
-            <a href="https://github.com/buttercup-pw/buttercup/releases" target="_blank">alpha-release</a>.
-        </p>
-        <p class="social">
-            <a href="https://twitter.com/buttercup_pw" target="_blank" class="twitter"></a>
-            <a href="https://github.com/perry-mitchell/buttercup" target="_blank" class="github"></a>
-        </p>
-        <p class="about">
-            Made with joy by <a href="http://perrymitchell.net" target="_blank">Perry Mitchell</a> &
-            <a href="http://sallar.me" target="_blank">Sallar Kaboli</a>.
-        </p>
-    </section>
-    <!-- Google -->
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    <header>
+        <nav class="nav has-shadow">
+            <div class="container">
+                <div class="nav-left">
+                    <a class="nav-item">
+                        <img src="http://bulma.io/images/bulma-logo.png" alt="Bulma logo">
+                    </a>
+                </div>
 
-        ga('create', 'UA-70971437-1', 'auto');
-        ga('send', 'pageview');
-    </script>
-    <!-- /Google -->
+                <div class="nav-center">
+                    <a class="nav-item">
+                        <span class="icon">
+                        <i class="fa fa-github"></i>
+                    </span>
+                    </a>
+                    <a class="nav-item">
+                        <span class="icon">
+                        <i class="fa fa-twitter"></i>
+                    </span>
+                    </a>
+                </div>
+
+                <div class="nav-right nav-menu">
+                    <a class="nav-item">Home</a>
+                    <a class="nav-item">Documentation</a>
+                    <a class="nav-item">Blog</a>
+
+                    <span class="nav-item">
+                        <a class="button is-primary">
+                            <span>Download</span>
+                        </a>
+                    </span>
+                </div> 
+            </div>
+        </nav>
+    </header>
+    <section class="hero is-primary is-bold is-medium">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">
+                    Hero title
+                </h1>
+                <h2 class="subtitle">
+                    Hero subtitle
+                </h2>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
