@@ -4,38 +4,114 @@
     <title>Buttercup</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
-    <link rel="stylesheet" href="/css/style.css">
-    <script src="https://use.typekit.net/asd4egi.js"></script>
-    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <link rel="stylesheet" href="/css/style.css?v2">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/buttercup/heflipieckodmcppbnembejjmabajjjj">
 </head>
 <body>
-    <section class="content">
-        <h1>Buttercup.</h1>
-        <span class="cross"></span>
-        <p>
-            We didn’t like the existing password managers, so we decided to make our own. Buttercup is an
-            open-source, free and cross-platform password management app, available as an
-            <a href="https://github.com/buttercup-pw/buttercup/releases" target="_blank">alpha-release</a>.
-        </p>
-        <p class="social">
-            <a href="https://twitter.com/buttercup_pw" target="_blank" class="twitter"></a>
-            <a href="https://github.com/perry-mitchell/buttercup" target="_blank" class="github"></a>
-        </p>
-        <p class="about">
-            Made with joy by <a href="http://perrymitchell.net" target="_blank">Perry Mitchell</a> &
-            <a href="http://sallar.me" target="_blank">Sallar Kaboli</a>.
-        </p>
+    <header>
+        <nav class="nav has-shadow">
+            <div class="container">
+                <div class="nav-left">
+                    <a class="nav-item">
+                        <img src="img/logo.svg" alt="Buttercup Logo">
+                    </a>
+                </div>
+
+                <div class="nav-center">
+                    <a class="nav-item" href="https://github.com/buttercup-pw/buttercup" target="_blank">
+                        <span class="icon">
+                            <i class="fa fa-github"></i>
+                        </span>
+                    </a>
+                    <a class="nav-item" href="https://twitter.com/buttercup_pw" target="_blank">
+                        <span class="icon">
+                            <i class="fa fa-twitter"></i>
+                        </span>
+                    </a>
+                </div>
+
+                <div class="nav-right nav-menu">
+                    <a class="nav-item" href="/">Home</a>
+                    <a class="nav-item" href="https://chrome.google.com/webstore/detail/buttercup/heflipieckodmcppbnembejjmabajjjj?hl=en">Chrome Extension</a>
+
+                    <span class="nav-item">
+                        <a class="button is-primary" href="#download">
+                            <span>Download</span>
+                        </a>
+                    </span>
+                </div> 
+            </div>
+        </nav>
+    </header>
+    <section class="hero is-primary">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title is-1">
+                    Buttercup
+                </h1>
+                <h2 class="subtitle is-3">
+                    The Password Manager You Deserve.
+                </h2>
+            </div>
+        </div>
+        <div class="hero-foot">
+            <div class="container">
+                <img class="image" src="img/buttercup.png" alt="Buttercup">
+            </div>
+        </div>
     </section>
-    <!-- Google -->
+    <section class="section">
+        <div class="container has-text-centered">
+            <a class="button is-large" href="https://download.buttercup.pw" target="_blank">
+                <span class="icon">
+                    <i class="fa fa-cloud-download"></i>
+                </span>
+                <span>Download for Desktop</span>
+            </a>
+            <a class="button is-large add-to-chrome">
+                <span class="icon">
+                    <i class="fa fa-chrome"></i>
+                </span>
+                <span>Add To Chrome</span>
+            </a>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="content has-text-centered" id="download">
+                <p>
+                    <strong>Buttercup</strong> is made by <a href="https://twitter.com/perry_mitchell" target="_blank">Perry Mitchell</a> & <a href="https://twitter.com/sallar" target="_blank">Sallar Kaboli</a> in Helsinki, Finland.
+                </p>
+                <p>
+                    <a class="icon" href="https://github.com/buttercup-pw/buttercup" target="_blank">
+                        <i class="fa fa-github"></i>
+                    </a>
+                </p>
+            </div>
+        </div>
+    </footer>
     <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        var addToChrome = document.querySelector('.add-to-chrome');
+        addToChrome.addEventListener('click', function(e) {
+            e.preventDefault();
+            chrome.webstore.install();
+        });
+        if (chrome.app.isInstalled) {
+            addToChrome.classList.add('is-disabled');
+        }
+    </script>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)        
+}, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
         ga('create', 'UA-70971437-1', 'auto');
         ga('send', 'pageview');
     </script>
-    <!-- /Google -->
 </body>
 </html>

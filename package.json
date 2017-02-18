@@ -1,7 +1,7 @@
 {
-  "name": "buttercup-web",
-  "version": "1.0.0",
-  "description": "Buttercup password manager",
+  "name": "buttercup-website",
+  "version": "2.0.0",
+  "description": "Buttercup's Website",
   "scripts": {
     "dev": "grunt",
     "build": "grunt build",
@@ -9,15 +9,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/perry-mitchell/buttercup.git"
+    "url": "git+https://github.com/buttercup-pw/buttercup-website.git"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/perry-mitchell/buttercup/issues"
+    "url": "https://github.com/buttercup-pw/buttercup-website/issues"
   },
-  "homepage": "https://github.com/perry-mitchell/buttercup#readme",
+  "homepage": "https://github.com/buttercup-pw/buttercup-website#readme",
   "devDependencies": {
     "autoprefixer": "^6.5.3",
+    "bulma": "^0.3.1",
     "grunt": "^1.0.1",
     "grunt-contrib-connect": "^1.0.2",
     "grunt-contrib-copy": "^1.0.0",
