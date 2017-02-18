@@ -6,3 +6,7 @@ $primary: #00B7AC;
 
 // Imports
 @import "../../node_modules/bulma/bulma";
+
+.hero {
+    border-bottom: 1px solid $white-ter;
+}
