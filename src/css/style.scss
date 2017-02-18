@@ -1,6 +1,8 @@
+// Variables
+$family-sans-serif: "PT Sans";
+$size-6: 15px;
+
+$primary: #00B7AC;
+
 // Imports
 @import "../../node_modules/bulma/bulma";
-
-body {
-    color: blue;
-}
