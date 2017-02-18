@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/css/style.css?v2">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
-    <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/heflipieckodmcppbnembejjmabajjjj">
+    <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/buttercup/heflipieckodmcppbnembejjmabajjjj">
 </head>
 <body>
     <header>
@@ -96,9 +96,7 @@
         var addToChrome = document.querySelector('.add-to-chrome');
         addToChrome.addEventListener('click', function(e) {
             e.preventDefault();
-            try {
-                chrome.webstore.install();
-            } catch (err) { }
+            chrome.webstore.install();
         });
         if (chrome.app.isInstalled) {
             addToChrome.classList.add('is-disabled');
