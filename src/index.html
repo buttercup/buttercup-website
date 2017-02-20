@@ -97,6 +97,7 @@
         </div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.2/fetch.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/native-promise-only/0.8.1/npo.js"></script>
     <script>
         var addToChrome = document.querySelector('.add-to-chrome');
         addToChrome.addEventListener('click', function(e) {
@@ -108,8 +109,10 @@
         }
 
         fetch('https://api.github.com/repos/buttercup-pw/buttercup/tags')
-            .then(res => res.json())
-            .then(res => {
+            .then(function(res) {
+                return res.json();
+            })
+            .then(function(res) {
                 document.querySelector('.version').innerHTML = res[0].name;
             });
     </script>
