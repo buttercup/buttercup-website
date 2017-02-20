@@ -79,6 +79,7 @@
                 </a>
             </p>
             <p>Alternatively, using Homebrew: <code>$ brew install buttercup</code></p>
+            <p>Latest: <strong class="version"></strong>. <a href="https://github.com/buttercup-pw/buttercup/releases" target="_blank">Releases Page</a>.</p>
         </div>
     </section>
     <footer class="footer">
@@ -95,6 +96,7 @@
             </div>
         </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.2/fetch.min.js"></script>
     <script>
         var addToChrome = document.querySelector('.add-to-chrome');
         addToChrome.addEventListener('click', function(e) {
@@ -104,6 +106,12 @@
         if (chrome.app.isInstalled) {
             addToChrome.classList.add('is-disabled');
         }
+
+        fetch('https://api.github.com/repos/buttercup-pw/buttercup/tags')
+            .then(res => res.json())
+            .then(res => {
+                document.querySelector('.version').innerHTML = res[0].name;
+            });
     </script>
     <script>
         (function (i, s, o, g, r, a, m) {
