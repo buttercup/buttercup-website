@@ -60,7 +60,12 @@ export default () => (
                         </span>
                         <span>Download for Desktop</span>
                     </a>{' '}
-                    <a className="button is-large add-to-chrome">
+                    <a
+                        className="button is-large add-to-chrome"
+                        onClick={e => {
+                            e.preventDefault();
+                            chrome.webstore.install();
+                        }}>
                         <span className="icon">
                             <i className="fa fa-chrome"></i>
                         </span>
