@@ -3,9 +3,9 @@
   "version": "2.0.0",
   "description": "Buttercup's Website",
   "scripts": {
-    "dev": "grunt",
-    "build": "grunt build",
-    "deploy": "grunt build && ./deploy live go"
+    "dev": "grunt next && next",
+    "build": "next build",
+    "start": "next start"
   },
   "repository": {
     "type": "git",
@@ -26,5 +26,10 @@
     "grunt-postcss": "^0.8.0",
     "grunt-sass": "^1.2.1",
     "load-grunt-tasks": "^3.5.2"
+  },
+  "dependencies": {
+    "next": "^1.2.3",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
   }
 }

@@ -7,11 +7,17 @@ module.exports = function(grunt) {
 
         sass: {
             options: {
-                sourceMap: false
+                sourceMap: false,
+                outputStyle: 'compact'
             },
             dist: {
                 files: {
                     'dist/css/style.css': 'src/css/style.scss'
+                }
+            },
+            next: {
+                files: {
+                    'static/style.css': 'css/style.scss'
                 }
             }
         },
@@ -28,6 +34,10 @@ module.exports = function(grunt) {
             dist: {
                 src: 'dist/css/style.css',
                 dest: 'dist/css/style.css'
+            },
+            next: {
+                src: 'static/style.css',
+                dest: 'static/style.css'
             }
         },
 
@@ -75,6 +85,11 @@ module.exports = function(grunt) {
         'copy',
         'sass',
         'postcss'
+    ]);
+
+    grunt.registerTask('next', [
+        'sass:next',
+        'postcss:next'
     ]);
 
 };
