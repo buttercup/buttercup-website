@@ -1,6 +1,6 @@
 {
   "name": "buttercup-website",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Buttercup's Website",
   "scripts": {
     "dev": "grunt next && next",
@@ -19,18 +19,18 @@
   "devDependencies": {
     "autoprefixer": "^6.5.3",
     "bulma": "^0.3.1",
+    "fetch-ponyfill": "^4.0.0",
     "grunt": "^1.0.1",
     "grunt-contrib-connect": "^1.0.2",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-postcss": "^0.8.0",
     "grunt-sass": "^1.2.1",
-    "load-grunt-tasks": "^3.5.2"
-  },
-  "dependencies": {
-    "fetch-ponyfill": "^4.0.0",
-    "next": "^1.2.3",
+    "load-grunt-tasks": "^3.5.2",
     "react": "^15.4.2",
     "react-dom": "^15.4.2"
+  },
+  "dependencies": {
+    "next": "^1.2.3"
   }
 }
