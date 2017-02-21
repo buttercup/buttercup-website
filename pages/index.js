@@ -1,15 +1,8 @@
-import Head from 'next/head';
+import Page from '../components/page';
+import LatestVersion from '../components/version';
 
 export default () => (
-    <div>
-        <Head>
-            <title>Buttercup</title>
-            <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width"/>
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-            <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet"/>
-            <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/heflipieckodmcppbnembejjmabajjjj"/>
-            <link rel="stylesheet" href="/static/style.css" type="text/css"/>
-        </Head>
+    <Page title="Buttercup">
         <header>
             <nav className="nav has-shadow">
                 <div className="container">
@@ -66,7 +59,7 @@ export default () => (
                             <i className="fa fa-cloud-download"></i>
                         </span>
                         <span>Download for Desktop</span>
-                    </a>
+                    </a>{' '}
                     <a className="button is-large add-to-chrome">
                         <span className="icon">
                             <i className="fa fa-chrome"></i>
@@ -75,7 +68,7 @@ export default () => (
                     </a>
                 </p>
                 <p>Alternatively, using Homebrew: <code>$ brew install buttercup</code></p>
-                <p>Latest: <strong className="version"></strong>. <a href="https://github.com/buttercup-pw/buttercup/releases" target="_blank">Releases Page</a>.</p>
+                <p>Latest: <LatestVersion/>. <a href="https://github.com/buttercup-pw/buttercup/releases" target="_blank">Releases Page</a>.</p>
             </div>
         </section>
         <footer className="footer">
@@ -92,5 +85,5 @@ export default () => (
                 </div>
             </div>
         </footer>
-    </div>
-)
+    </Page>
+);
