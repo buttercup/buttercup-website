@@ -1,5 +1,5 @@
 import { Component } from 'react';
-const { fetch } =  require('fetch-ponyfill')();
+import fetch from 'unfetch';
 
 export default class Version extends Component {
 

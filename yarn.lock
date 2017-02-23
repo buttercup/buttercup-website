@@ -1206,6 +1206,10 @@ error-stack-parser@^1.3.6:
   dependencies:
     stackframe "^0.3.1"
 
+es6-promise@^4.0.5:
+  version "4.0.5"
+  resolved "https://registry.yarnpkg.com/es6-promise/-/es6-promise-4.0.5.tgz#7882f30adde5b240ccfa7f7d78c548330951ae42"
+
 escape-html@~1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/escape-html/-/escape-html-1.0.3.tgz#0258eae4d3d0c0974de1c169188ef0051d1d1988"
@@ -1281,12 +1285,6 @@ fbjs@^0.8.1, fbjs@^0.8.4, fbjs@^0.8.6:
     promise "^7.1.1"
     setimmediate "^1.0.5"
     ua-parser-js "^0.7.9"
-
-fetch-ponyfill@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/fetch-ponyfill/-/fetch-ponyfill-4.0.0.tgz#18cfe38d69cde42aec71cb3ace79e1f2276293da"
-  dependencies:
-    node-fetch "~1.6.0"
 
 file-sync-cmp@^0.1.0:
   version "0.1.1"
@@ -2330,7 +2328,7 @@ next@^1.2.3:
     webpack-hot-middleware "2.13.2"
     write-file-webpack-plugin "3.4.2"
 
-node-fetch@^1.0.1, node-fetch@~1.6.0:
+node-fetch@^1.0.1:
   version "1.6.3"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-1.6.3.tgz#dc234edd6489982d58e8f0db4f695029abcd8c04"
   dependencies:
@@ -3372,6 +3370,10 @@ uid-number@~0.0.6:
 underscore.string@~3.2.3:
   version "3.2.3"
   resolved "https://registry.yarnpkg.com/underscore.string/-/underscore.string-3.2.3.tgz#806992633665d5e5fcb4db1fb3a862eb68e9e6da"
+
+unfetch@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/unfetch/-/unfetch-1.0.1.tgz#185777ec48d69b1e0e89c3efd60ccc4401d90fe7"
 
 unpipe@1.0.0, unpipe@~1.0.0:
   version "1.0.0"

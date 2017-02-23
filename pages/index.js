@@ -1,3 +1,4 @@
+require('es6-promise/auto');
 import Page from '../components/page';
 import LatestVersion from '../components/version';
 
