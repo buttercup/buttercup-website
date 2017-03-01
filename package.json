@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "grunt next && next",
     "build": "grunt next && next build",
-    "start": "next start"
+    "start": "next start",
+    "deploy": "shipit production deploy"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,8 @@
     "load-grunt-tasks": "^3.5.2",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
+    "shipit-cli": "^3.0.0",
+    "shipit-deploy": "^2.4.0",
     "unfetch": "^1.0.1"
   },
   "dependencies": {
