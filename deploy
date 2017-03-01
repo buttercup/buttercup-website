@@ -1,3 +1,0 @@
-#!/bin/bash
-
-rsync -az --force --delete --progress -e "ssh -p22" ./dist/ root@buttercup.pw:/usr/share/nginx/html/buttercup
