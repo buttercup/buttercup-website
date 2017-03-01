@@ -1,11 +1,12 @@
 {
   "name": "buttercup-website",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Buttercup's Website",
   "scripts": {
-    "dev": "grunt",
-    "build": "grunt build",
-    "deploy": "grunt build && ./deploy live go"
+    "dev": "grunt next && next",
+    "build": "grunt next && next build",
+    "start": "next start",
+    "deploy": "shipit production deploy"
   },
   "repository": {
     "type": "git",
@@ -19,12 +20,21 @@
   "devDependencies": {
     "autoprefixer": "^6.5.3",
     "bulma": "^0.3.1",
+    "es6-promise": "^4.0.5",
     "grunt": "^1.0.1",
     "grunt-contrib-connect": "^1.0.2",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-postcss": "^0.8.0",
     "grunt-sass": "^1.2.1",
-    "load-grunt-tasks": "^3.5.2"
+    "load-grunt-tasks": "^3.5.2",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "shipit-cli": "^3.0.0",
+    "shipit-deploy": "^2.4.0",
+    "unfetch": "^1.0.1"
+  },
+  "dependencies": {
+    "next": "^1.2.3"
   }
 }
