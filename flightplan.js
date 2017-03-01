@@ -21,16 +21,12 @@ plan.remote(function (remote) {
     remote.log('Move folder to web root');
     remote.sudo(`cp -R /tmp/${tmpDir} ~/buttercup/`);
     remote.rm(`-rf /tmp/${tmpDir}`);
-
-    remote.log('Install dependencies');
-    remote.sudo(`npm --production --prefix ~/buttercup/${tmpDir} install ~/buttercup/${tmpDir}`);
-
-    remote.log('Reload application');
-    remote.sudo(`ln -snf ~/buttercup/${tmpDir} ~/buttercup/current`);
     remote.sudo(`ln -snf ~/buttercup/${tmpDir} ~/buttercup/current`);
 
     remote.with('cd ~/buttercup/current', () => {
-        remote.sudo('npm run build');
+        remote.log('Install dependencies');
+        remote.exec('yarn install');
+        remote.exec('yarn build');
+        remote.sudo('pm2 startOrRestart ecosystem.json');
     });
-    // remote.sudo('pm2 reload example-com');
 });
