@@ -6,7 +6,7 @@
     "dev": "grunt next && next",
     "build": "grunt next && next build",
     "start": "next start",
-    "deploy": "shipit production deploy"
+    "deploy": "fly production"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,7 @@
     "autoprefixer": "^6.5.3",
     "bulma": "^0.3.1",
     "es6-promise": "^4.0.5",
+    "flightplan": "^0.6.15",
     "grunt": "^1.0.1",
     "grunt-contrib-connect": "^1.0.2",
     "grunt-contrib-copy": "^1.0.0",
@@ -30,8 +31,6 @@
     "load-grunt-tasks": "^3.5.2",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "shipit-cli": "^3.0.0",
-    "shipit-deploy": "^2.4.0",
     "unfetch": "^1.0.1"
   },
   "dependencies": {
