@@ -3,7 +3,7 @@
     {
       name      : "website",
       script    : "node_modules/.bin/next",
-      args:     : "start"
+      args      : "start"
     }
   ]
 }
