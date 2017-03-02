@@ -3269,11 +3269,11 @@ right-align@^0.1.1:
   dependencies:
     align-text "^0.1.1"
 
-rimraf@2, rimraf@^2.2.8, rimraf@~2.2.8:
+rimraf@2, rimraf@2.x.x, rimraf@^2.2.8, rimraf@~2.2.8:
   version "2.2.8"
   resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.2.8.tgz#e439be2aaee327321952730f99a8929e4fc50582"
 
-rimraf@2.x.x, rimraf@~2.5.1, rimraf@~2.5.4:
+rimraf@~2.5.1, rimraf@~2.5.4:
   version "2.5.4"
   resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.5.4.tgz#96800093cbf1a0c86bd95b4625467535c29dfa04"
   dependencies:
@@ -3659,9 +3659,9 @@ underscore.string@~3.2.3:
   version "3.2.3"
   resolved "https://registry.yarnpkg.com/underscore.string/-/underscore.string-3.2.3.tgz#806992633665d5e5fcb4db1fb3a862eb68e9e6da"
 
-unfetch@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/unfetch/-/unfetch-1.0.1.tgz#185777ec48d69b1e0e89c3efd60ccc4401d90fe7"
+unfetch@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/unfetch/-/unfetch-2.1.1.tgz#d934f087be15f13b09277f56dc09f2630af313e3"
 
 unpipe@1.0.0, unpipe@~1.0.0:
   version "1.0.0"
