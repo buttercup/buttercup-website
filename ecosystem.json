@@ -2,11 +2,9 @@
   apps : [
 
     {
-      {
-        name: "website",
-        script: "node_modules/.bin/next",
-        args: "start"
-      }
+      name: "website",
+      script: "node_modules/.bin/next",
+      args: "start"
     }
   ],
 
@@ -15,7 +13,7 @@
       user : "root",
       host : "buttercup.pw",
       ref  : "origin/master",
-      repo : "git@github.com:repo.git",
+      repo : "https://github.com/buttercup-pw/buttercup-website.git",
       path : "/root/buttercup",
       "post-deploy" : "yarn && yarn build && pm2 startOrRestart ecosystem.json --env production"
     }
