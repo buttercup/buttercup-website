@@ -6,7 +6,7 @@
     "dev": "grunt next && next",
     "build": "grunt next && next build",
     "start": "next start",
-    "deploy": "fly production"
+    "deploy": "pm2 deploy production"
   },
   "repository": {
     "type": "git",
