@@ -73,7 +73,7 @@ export default () => (
                         <span>Add To Chrome</span>
                     </a>
                 </p>
-                <p>Alternatively, using Homebrew: <code>$ brew install buttercup</code></p>
+                <p>Alternatively, using Homebrew: <code>$ brew cask install buttercup</code></p>
                 <p>Latest: <LatestVersion/>. <a href="https://github.com/buttercup-pw/buttercup/releases" target="_blank">Releases Page</a>.</p>
             </div>
         </section>
