@@ -14,12 +14,12 @@ export default () => (
                     </div>
 
                         <div className="nav-center">
-                            <a className="nav-item" href="https://github.com/buttercup-pw/buttercup" target="_blank">
+                            <a className="nav-item" href="https://github.com/buttercup-pw/buttercup" rel="noopener" target="_blank">
                                 <span className="icon">
                                     <i className="fa fa-github"></i>
                                 </span>
                             </a>
-                            <a className="nav-item" href="https://twitter.com/buttercup_pw" target="_blank">
+                            <a className="nav-item" href="https://twitter.com/buttercup_pw" rel="noopener" target="_blank">
                                 <span className="icon">
                                     <i className="fa fa-twitter"></i>
                                 </span>
@@ -55,7 +55,7 @@ export default () => (
         <section className="section">
             <div className="container has-text-centered content">
                 <p>
-                    <a className="button is-large" href="https://download.buttercup.pw" target="_blank">
+                    <a className="button is-large" href="https://download.buttercup.pw" rel="noopener" target="_blank">
                         <span className="icon">
                             <i className="fa fa-cloud-download"></i>
                         </span>
@@ -74,17 +74,17 @@ export default () => (
                     </a>
                 </p>
                 <p>Alternatively, using Homebrew: <code>$ brew cask install buttercup</code></p>
-                <p>Latest: <LatestVersion/>. <a href="https://github.com/buttercup-pw/buttercup/releases" target="_blank">Releases Page</a>.</p>
+                <p>Latest: <LatestVersion/>. <a href="https://github.com/buttercup-pw/buttercup/releases" rel="noopener" target="_blank">Releases Page</a>.</p>
             </div>
         </section>
         <footer className="footer">
             <div className="container">
                 <div className="content has-text-centered" id="download">
                     <p>
-                        <strong>Buttercup</strong> is made by <a href="https://twitter.com/perry_mitchell" target="_blank">Perry Mitchell</a> & <a href="https://twitter.com/sallar" target="_blank">Sallar Kaboli</a> in Helsinki, Finland.
+                        <strong>Buttercup</strong> is made by <a href="https://twitter.com/perry_mitchell" rel="noopener" target="_blank">Perry Mitchell</a> & <a href="https://twitter.com/sallar" rel="noopener" target="_blank">Sallar Kaboli</a> in Helsinki, Finland.
                     </p>
                     <p>
-                        <a className="icon" href="https://github.com/buttercup-pw/buttercup" target="_blank">
+                        <a className="icon" href="https://github.com/buttercup-pw/buttercup" rel="noopener" target="_blank">
                             <i className="fa fa-github"></i>
                         </a>
                     </p>
