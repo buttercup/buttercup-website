@@ -31,7 +31,7 @@ export default () => (
                             <a className="nav-item" href="https://chrome.google.com/webstore/detail/buttercup/heflipieckodmcppbnembejjmabajjjj?hl=en">Chrome Extension</a>
 
                             <span className="nav-item">
-                                <a className="button is-primary" href="#download">
+                                <a className="button is-primary" href="https://download.buttercup.pw" rel="noopener" target="_blank">
                                     <span>Download</span>
                                 </a>
                             </span>
