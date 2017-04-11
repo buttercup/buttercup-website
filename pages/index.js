@@ -31,7 +31,7 @@ export default () => (
                             <a className="nav-item" href="https://chrome.google.com/webstore/detail/buttercup/heflipieckodmcppbnembejjmabajjjj?hl=en">Chrome Extension</a>
 
                             <span className="nav-item">
-                                <a className="button is-primary" href="https://download.buttercup.pw" rel="noopener" target="_blank">
+                                <a className="button is-primary" href="https://download.buttercup.pw" rel="noopener">
                                     <span>Download</span>
                                 </a>
                             </span>
@@ -55,7 +55,7 @@ export default () => (
         <section className="section">
             <div className="container has-text-centered content">
                 <p>
-                    <a className="button is-large" href="https://download.buttercup.pw" rel="noopener" target="_blank">
+                    <a className="button is-large" href="https://download.buttercup.pw" rel="noopener">
                         <span className="icon">
                             <i className="fa fa-cloud-download"></i>
                         </span>
