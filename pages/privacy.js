@@ -1,7 +1,7 @@
 import Page from '../components/page';
 
 export default () => (
-    <Page title="Buttercup">
+    <Page title="Privacy Policy">
         <section className="section">
             <div className="container content">
                 <h1>Privacy Policy</h1>

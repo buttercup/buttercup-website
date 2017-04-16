@@ -3,7 +3,7 @@ import Page from '../components/page';
 import LatestVersion from '../components/version';
 
 export default () => (
-    <Page title="Buttercup">
+    <Page>
         <section className="hero is-primary">
             <div className="hero-body">
                 <div className="container has-text-centered">
