@@ -3,7 +3,7 @@ export default () => (
         <nav className="nav has-shadow">
             <div className="container">
                 <div className="nav-left">
-                    <a className="nav-item">
+                    <a className="nav-item" href="/">
                         <img src="/static/img/logo.svg" alt="Buttercup Logo" />
                     </a>
                 </div>
