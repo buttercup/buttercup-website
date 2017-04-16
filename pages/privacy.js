@@ -1,6 +1,4 @@
-import 'es6-promise/auto';
 import Page from '../components/page';
-import LatestVersion from '../components/version';
 
 export default () => (
     <Page title="Buttercup">
