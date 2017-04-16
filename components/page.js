@@ -1,4 +1,6 @@
 import Head from 'next/head';
+import Header from './header';
+import Footer from './footer';
 
 const GA_CODE = `
 (function (i, s, o, g, r, a, m) {
@@ -24,6 +26,8 @@ export default ({ title, children }) => (
             <link rel="stylesheet" href="/static/style.css" type="text/css" />
             <script dangerouslySetInnerHTML={{__html: GA_CODE}}></script>
         </Head>
+        <Header/>
         {children}
+        <Footer/>
     </div>
 );
