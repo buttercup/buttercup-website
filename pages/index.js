@@ -2,6 +2,8 @@ import 'es6-promise/auto';
 import Page from '../components/page';
 import LatestVersion from '../components/version';
 
+const isLinux = (typeof navigator !== 'undefined') && /linux/i.test(navigator.platform);
+
 export default () => (
     <Page>
         <section className="hero is-primary">
@@ -20,12 +22,25 @@ export default () => (
         <section className="section">
             <div className="container has-text-centered content">
                 <p>
-                    <a className="button is-large" href="https://download.buttercup.pw" rel="noopener" target="_blank">
+                    {!isLinux && (<a className="button is-large" href="https://download.buttercup.pw" rel="noopener" target="_blank">
                         <span className="icon">
                             <i className="fa fa-cloud-download"></i>
                         </span>
                         <span>Download for Desktop</span>
-                    </a>{' '}
+                    </a>)}
+                    {isLinux && (
+                        <span>
+                            <a className="button is-large" href="https://download.buttercup.pw/download/linux_rpm" rel="noopener" target="_blank">
+                                <span className="icon"><i className="fa fa-cloud-download"></i></span>
+                                <span>Download .RPM</span>
+                            </a>{' '}
+                            <a className="button is-large" href="https://download.buttercup.pw/download/linux_deb_64" rel="noopener" target="_blank">
+                                <span className="icon"><i className="fa fa-cloud-download"></i></span>
+                                <span>Download .DEB</span>
+                            </a>
+                        </span>
+                    )}
+                    {' '}
                     <a
                         className="button is-large add-to-chrome"
                         onClick={e => {
