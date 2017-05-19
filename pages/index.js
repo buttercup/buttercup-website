@@ -1,8 +1,7 @@
 import 'es6-promise/auto';
 import Page from '../components/page';
 import LatestVersion from '../components/version';
-
-const isLinux = (typeof navigator !== 'undefined') && /linux/i.test(navigator.platform);
+import { isFirefox, isLinux } from '../utils/platform';
 
 export default () => (
     <Page>
@@ -41,17 +40,34 @@ export default () => (
                         </span>
                     )}
                     {' '}
-                    <a
-                        className="button is-large add-to-chrome"
-                        onClick={e => {
-                            e.preventDefault();
-                            chrome.webstore.install();
-                        }}>
-                        <span className="icon">
-                            <i className="fa fa-chrome"></i>
-                        </span>
-                        <span>Add To Chrome</span>
-                    </a>
+                    {!isFirefox && (
+                        <a
+                            className="button is-large add-to-chrome"
+                            onClick={e => {
+                                e.preventDefault();
+                                chrome.webstore.install();
+                            }}>
+                            <span className="icon">
+                                <i className="fa fa-chrome"></i>
+                            </span>
+                            <span>Add To Chrome</span>
+                        </a>
+                    )}
+                    {isFirefox && (
+                        <a
+                            className="button is-large add-to-firefox"
+                            onClick={e => {
+                                e.preventDefault();
+                                InstallTrigger.install({
+                                    "Buttercup": { URL: "https://addons.mozilla.org/firefox/downloads/latest/buttercup-pw/addon-795525-latest.xpi?src=dp-btn-primary" }
+                                });
+                            }}>
+                            <span className="icon">
+                                <i className="fa fa-firefox"></i>
+                            </span>
+                            <span>Add To Firefox</span>
+                        </a>
+                    )}
                 </p>
                 <p>Alternatively, using Homebrew: <code>$ brew cask install buttercup</code></p>
                 <p>Latest: <LatestVersion/>. <a href="https://github.com/buttercup-pw/buttercup/releases" rel="noopener" target="_blank">Releases Page</a>.</p>
