@@ -21,7 +21,7 @@ export default () => (
         <section className="section">
             <div className="container has-text-centered content">
                 <p>
-                    {!isLinux && (<a className="button is-large" href="https://download.buttercup.pw" rel="noopener" target="_blank">
+                    {!isLinux && (<a className="button is-large" href="https://download.buttercup.pw" rel="noopener">
                         <span className="icon">
                             <i className="fa fa-cloud-download"></i>
                         </span>
