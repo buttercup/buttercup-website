@@ -1,4 +1,6 @@
 import Head from 'next/head';
+import Header from './header';
+import Footer from './footer';
 
 const GA_CODE = `
 (function (i, s, o, g, r, a, m) {
@@ -15,7 +17,7 @@ ga('send', 'pageview');
 export default ({ title, children }) => (
     <div>
         <Head>
-            <title>{title}</title>
+            <title>{title ? `${title} - Buttercup` : 'Buttercup'}</title>
             <link rel="icon" href="/static/img/buttercup.ico" />
             <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width" />
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -24,6 +26,8 @@ export default ({ title, children }) => (
             <link rel="stylesheet" href="/static/style.css" type="text/css" />
             <script dangerouslySetInnerHTML={{__html: GA_CODE}}></script>
         </Head>
+        <Header/>
         {children}
+        <Footer/>
     </div>
 );
