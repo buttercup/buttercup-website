@@ -59,7 +59,7 @@ export default () => (
                             onClick={e => {
                                 e.preventDefault();
                                 InstallTrigger.install({
-                                    "Buttercup": { URL: "https://addons.mozilla.org/firefox/downloads/latest/buttercup/addon-795525-latest.xpi?src=dp-btn-primary" }
+                                    "Buttercup": { URL: "https://addons.mozilla.org/firefox/downloads/latest/buttercup-pw/addon-795525-latest.xpi?src=dp-btn-primary" }
                                 });
                             }}>
                             <span className="icon">
