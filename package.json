@@ -1,12 +1,12 @@
 {
   "name": "buttercup-website",
-  "version": "3.1.1",
+  "version": "4.0.0",
   "description": "Buttercup's Website",
   "scripts": {
     "dev": "grunt next && next",
     "build": "grunt next && next build && next export",
     "start": "next start",
-    "deploy": "pm2 deploy production"
+    "deploy": "rsync -az --force --delete --progress ./out/ root@buttercup.pw:/usr/share/nginx/html/buttercup"
   },
   "repository": {
     "type": "git",
