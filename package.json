@@ -4,7 +4,7 @@
   "description": "Buttercup's Website",
   "scripts": {
     "dev": "grunt next && next",
-    "build": "grunt next && next build",
+    "build": "grunt next && next build && next export",
     "start": "next start",
     "deploy": "pm2 deploy production"
   },
@@ -29,11 +29,11 @@
     "grunt-postcss": "^0.8.0",
     "grunt-sass": "^1.2.1",
     "load-grunt-tasks": "^3.5.2",
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
     "unfetch": "^2.1.1"
   },
   "dependencies": {
-    "next": "^1.2.3"
+    "next": "3.0.0-beta9"
   }
 }

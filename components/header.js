@@ -31,7 +31,7 @@ export default () => (
                     <a className="nav-item" href={extensionUrl}>{isFirefox ? 'Firefox' : 'Chrome'} Extension</a>
                     <a className="nav-item" href="/privacy">Privacy Policy</a>
                     <span className="nav-item">
-                        <a className="button is-primary" href="#download">
+                        <a className="button is-primary" href="/#download">
                             <span>Download</span>
                         </a>
                     </span>
