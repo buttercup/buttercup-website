@@ -8,7 +8,7 @@ export default class Version extends Component {
     }
 
     componentDidMount() {
-        fetch('https://api.github.com/repos/buttercup-pw/buttercup/tags')
+        fetch('https://api.github.com/repos/buttercup/buttercup/tags')
             .then(res => res.json())
             .then(res => {
                 this.setState({

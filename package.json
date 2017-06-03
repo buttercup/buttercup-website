@@ -1,22 +1,22 @@
 {
   "name": "buttercup-website",
-  "version": "3.1.1",
+  "version": "4.0.0",
   "description": "Buttercup's Website",
   "scripts": {
     "dev": "grunt next && next",
-    "build": "grunt next && next build",
+    "build": "grunt next && next build && next export",
     "start": "next start",
-    "deploy": "pm2 deploy production"
+    "deploy": "rsync -az --force --delete --progress ./out/ root@buttercup.pw:/usr/share/nginx/html/buttercup"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/buttercup-pw/buttercup-website.git"
+    "url": "git+https://github.com/buttercup/buttercup-website.git"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/buttercup-pw/buttercup-website/issues"
+    "url": "https://github.com/buttercup/buttercup-website/issues"
   },
-  "homepage": "https://github.com/buttercup-pw/buttercup-website#readme",
+  "homepage": "https://github.com/buttercup/buttercup-website#readme",
   "devDependencies": {
     "autoprefixer": "^6.5.3",
     "bulma": "^0.3.1",
@@ -29,11 +29,11 @@
     "grunt-postcss": "^0.8.0",
     "grunt-sass": "^1.2.1",
     "load-grunt-tasks": "^3.5.2",
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
     "unfetch": "^2.1.1"
   },
   "dependencies": {
-    "next": "^1.2.3"
+    "next": "3.0.0-beta9"
   }
 }
