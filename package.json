@@ -10,13 +10,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/buttercup-pw/buttercup-website.git"
+    "url": "git+https://github.com/buttercup/buttercup-website.git"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/buttercup-pw/buttercup-website/issues"
+    "url": "https://github.com/buttercup/buttercup-website/issues"
   },
-  "homepage": "https://github.com/buttercup-pw/buttercup-website#readme",
+  "homepage": "https://github.com/buttercup/buttercup-website#readme",
   "devDependencies": {
     "autoprefixer": "^6.5.3",
     "bulma": "^0.3.1",

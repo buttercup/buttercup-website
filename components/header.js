@@ -1,7 +1,7 @@
 import { isFirefox } from '../utils/platform';
 
 const extensionUrl = isFirefox
-    ? 'https://addons.mozilla.org/en-US/firefox/addon/buttercup-pw/'
+    ? 'https://addons.mozilla.org/en-US/firefox/addon/buttercup/'
     : 'https://chrome.google.com/webstore/detail/buttercup/heflipieckodmcppbnembejjmabajjjj?hl=en';
 
 export default () => (
@@ -15,7 +15,7 @@ export default () => (
                 </div>
 
                 <div className="nav-center">
-                    <a className="nav-item" href="https://github.com/buttercup-pw/buttercup" rel="noopener" target="_blank">
+                    <a className="nav-item" href="https://github.com/buttercup/buttercup" rel="noopener" target="_blank">
                         <span className="icon">
                             <i className="fa fa-github"></i>
                         </span>
