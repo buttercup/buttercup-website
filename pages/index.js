@@ -70,7 +70,7 @@ export default () => (
                     )}
                 </p>
                 <p>Alternatively, using Homebrew: <code>$ brew cask install buttercup</code></p>
-                <p>Latest: <LatestVersion/>. <a href="https://github.com/buttercup/buttercup/releases" rel="noopener" target="_blank">Releases Page</a>.</p>
+                <p>Latest: <LatestVersion/>. <a href="https://github.com/buttercup/buttercup-desktop/releases" rel="noopener" target="_blank">Releases Page</a>.</p>
             </div>
         </section>
     </Page>

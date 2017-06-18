@@ -15,7 +15,7 @@ export default () => (
                 </div>
 
                 <div className="nav-center">
-                    <a className="nav-item" href="https://github.com/buttercup/buttercup" rel="noopener" target="_blank">
+                    <a className="nav-item" href="https://github.com/buttercup/buttercup-desktop" rel="noopener" target="_blank">
                         <span className="icon">
                             <i className="fa fa-github"></i>
                         </span>
