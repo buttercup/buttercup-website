@@ -14,6 +14,20 @@ ga('create', 'UA-70971437-1', 'auto');
 ga('send', 'pageview');
 `;
 
+const PIWIK_CODE = `
+var _paq = _paq || [];
+/* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+_paq.push(['trackPageView']);
+_paq.push(['enableLinkTracking']);
+(function() {
+  var u="//analytics.buttercup.pw/";
+  _paq.push(['setTrackerUrl', u+'piwik.php']);
+  _paq.push(['setSiteId', '1']);
+  var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+  g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+})();
+`;
+
 export default ({ title, children }) => (
     <div>
         <Head>
@@ -25,6 +39,7 @@ export default ({ title, children }) => (
             <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/heflipieckodmcppbnembejjmabajjjj" />
             <link rel="stylesheet" href="/static/style.css" type="text/css" />
             <script dangerouslySetInnerHTML={{__html: GA_CODE}}></script>
+            <script dangerouslySetInnerHTML={{__html: PIWIK_CODE}}></script>
         </Head>
         <Header/>
         {children}
