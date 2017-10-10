@@ -6,35 +6,60 @@ const extensionUrl = isFirefox
 
 export default () => (
     <header>
-        <nav className="nav has-shadow">
-            <div className="container">
-                <div className="nav-left">
-                    <a className="nav-item" href="/">
-                        <img src="/static/img/logo.svg" alt="Buttercup Logo" />
-                    </a>
-                </div>
+        <nav className="navbar is-transparent">
+            <div className="navbar-brand">
+                <a className="navbar-item" href="/">
+                    <img src="/static/img/logo.svg" alt="Buttercup Logo" />
+                </a>
 
-                <div className="nav-center">
-                    <a className="nav-item" href="https://github.com/buttercup/buttercup-desktop" rel="noopener" target="_blank">
-                        <span className="icon">
-                            <i className="fa fa-github"></i>
-                        </span>
-                    </a>
-                    <a className="nav-item" href="https://twitter.com/buttercup_pw" rel="noopener" target="_blank">
-                        <span className="icon">
-                            <i className="fa fa-twitter"></i>
-                        </span>
-                    </a>
-                </div>
-
-                <div className="nav-right nav-menu">
-                    <a className="nav-item" href={extensionUrl}>{isFirefox ? 'Firefox' : 'Chrome'} Extension</a>
-                    <a className="nav-item" href="/privacy">Privacy Policy</a>
-                    <span className="nav-item">
-                        <a className="button is-primary" href="/#download">
-                            <span>Download</span>
-                        </a>
+                <a className="navbar-item is-hidden-desktop" href="https://github.com/buttercup" target="_blank">
+                    <span className="icon">
+                        <i className="fa fa-lg fa-github"></i>
                     </span>
+                </a>
+
+                <a className="navbar-item is-hidden-desktop" href="https://twitter.com/buttercup" target="_blank">
+                    <span className="icon">
+                        <i className="fa fa-lg fa-twitter"></i>
+                    </span>
+                </a>
+
+                <div className="navbar-burger burger" data-target="mainMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+
+            <div id="mainMenu" className="navbar-menu">
+                <div className="navbar-start">
+                    <a className="navbar-item " href="/">Home</a>
+                    <a className="navbar-item " href="/privacy/">Privacy Policy</a>
+                </div>
+
+                <div className="navbar-end">
+                    <a className="navbar-item is-hidden-desktop-only" href="https://github.com/buttercup" target="_blank">
+                        <span className="icon">
+                            <i className="fa fa-lg fa-github"></i>
+                        </span>
+                    </a>
+                    <a className="navbar-item is-hidden-desktop-only" href="https://twitter.com/buttercup" target="_blank">
+                        <span className="icon">
+                            <i className="fa fa-lg fa-twitter"></i>
+                        </span>
+                    </a>
+                    <div className="navbar-item">
+                        <div className="field is-grouped">
+                            <p className="control">
+                                <a className="button is-primary" href="#download">
+                                    <span className="icon">
+                                        <i className="fa fa-download"></i>
+                                    </span>
+                                    <span>Download</span>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </nav>
