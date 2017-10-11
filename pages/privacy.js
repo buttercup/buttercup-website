@@ -25,11 +25,11 @@ export default () => (
 
                 <h3>Buttercup desktop application</h3>
                 <p>The desktop application allows users to create and use local/remote archives. Only the password, keyfile or both will be requested from the user - these are used to encrypt and decrypt their archive file. The user may be prompted for their synchronisation account information for storing the archive and this information is stored locally in encrypted form. The archive itself may be synchronised using a file sync service (like Dropbox/ownCloud etc.) of the user’s choice using their own account. The archive that is written to the synchronisation service is already encrypted before sending.</p>
-                <p>No unencrypted data is written to the archive. No user information is written to the archive besides the credentials they choose to store in the archive. No analytics are recorded during operation of the application.</p>
+                <p>No unencrypted data is written to the archive. No user information is written to the archive besides the credentials they choose to store in the archive.</p>
 
                 <h3>Buttercup browser extension</h3>
-                <p>The browser extension allows users to create and use remote archives. Only the master password and archive name is requested by the user when adding an archive. The user may be requested for cloud synchronisation information for use with their choice of file synchronisation service provider, and these details are stored locally in encrypted form.</p>
-                <p>No unencrypted data is written to the archive. No user information is written to the archive besides the credentials they choose to store in the archive. No analytics are recorded during operation of the application.</p>
+                <p>The browser extension allows users to create and use remote archives. Only the master password and archive name is requested from the user when adding an archive. The user may be requested for cloud synchronisation information for use with their choice of file synchronisation service provider, and these details are stored locally in encrypted form.</p>
+                <p>No unencrypted data is written to the archive. No user information is written to the archive besides the credentials they choose to store in the archive.</p>
             </div>
         </section>
     </Page>
