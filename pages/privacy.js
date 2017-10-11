@@ -31,6 +31,9 @@ export default () => (
                 <h3>Buttercup browser extension</h3>
                 <p>The browser extension allows users to create and use remote archives. Only the master password and archive name is requested from the user when adding an archive. The user may be requested for cloud synchronisation information for use with their choice of file synchronisation service provider, and these details are stored locally in encrypted form.</p>
                 <p>No unencrypted data is written to the archive. No user information is written to the archive besides the credentials they choose to store in the archive.</p>
+
+                <h3>Buttercup mobile application</h3>
+                <p>The mobile app allows users to create and use local/remote archives. Only the master password is requested from the user when creating or opening their archive. The user may be requested for cloud synchronisation information for use with their choice of file synchronisation service provider, and these details are stored locally in encrypted form. The archive itself may be synchronised using a file sync service (like Dropbox/ownCloud etc.) of the user’s choice using their own account. The archive that is written to the synchronisation service is already encrypted before sending.</p>
             </div>
         </section>
     </Page>
