@@ -13,10 +13,11 @@ export default () => (
                 <p>Archives are encrypted using extremely strong modern encryption methods by using a password provided by the user. Files are encrypted <u>on the user’s device</u> before being synchronised using any of services mentioned earlier. Archives can only be decrypted by using the user’s secret password. There is no way to bypass encryption or to open the archive without the original password. The user is responsible for their password choice in terms of strength.</p>
                 
                 <h2>What data is provided to and used by Buttercup</h2>
-                <p>Buttercup uses only the bare minimum information necessary to function in a user-friendly manner. No data is shared with other parties and no analytics is recorded during operation of any end product produced by Buttercup.</p>
+                <p>Buttercup uses only the bare minimum information necessary to function in a user-friendly manner. No data is shared with or sold to 3rd parties.</p>
                 
                 <h3>Using 3rd party synchronisation</h3>
                 <p>When using a synchronisation method outside of My Buttercup, no user-specific information is requested or stored. Any data entered by the user in any of the Buttercup applications is kept in that application and not transferred from the user’s device. Contents in the user’s archive(s) is always encrypted using their secret password before being stored in a user-chosen synchronisation service.</p>
+                <p>Buttercup software collects anonymous analytics to help improve the platform. No user-identifiable data is collected and IP addresses are anonymized (last digits are zeroed).</p>
 
                 <h3>Using My Buttercup accounts and synchronisation</h3>
                 <p>When using the hosted alternative, My Buttercup only stores the user’s email address and their securely-hashed password (SHA-256). All other information is optional and not specific to the user. Archives stored in the My Buttercup service are <u>already encrypted before they reach the My Buttercup servers</u> and are not accessible by anyone other than the user (with their password).</p>
