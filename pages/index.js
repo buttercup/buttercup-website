@@ -5,14 +5,11 @@ import { isFirefox, isLinux } from '../utils/platform';
 
 export default () => (
     <Page>
-        <section className="hero is-primary">
-            <div className="container is-fullhd">
+        <section className="hero is-primary is-medium is-bold">
+            <div className="container">
                 <div className="hero-body has-text-centered">
                     <h1 className="title is-1">Buttercup</h1>
                     <h2 className="subtitle is-3">The Password Manager You Deserve.</h2>
-                </div>
-                <div className="hero-foot">
-                        <img className="image" src="/static/img/buttercup.png" alt="Buttercup"/>
                 </div>
             </div>
         </section>
