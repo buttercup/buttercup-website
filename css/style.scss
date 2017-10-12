@@ -14,3 +14,22 @@ $primary: #00B7AC;
         margin-top: 1.5rem;
     }
 }
+
+.is-grouped > .button {
+    margin-right: .5rem;
+}
+
+.store-links {
+    > a {
+        display: inline-block;
+        margin-right: .5rem;
+
+        img {
+            display: block;
+        }
+    }
+}
+
+.section-mobile {
+    background-color: $white-ter;
+}

@@ -12,7 +12,7 @@ const desktopDownloads = [
     },
     {
         icon: 'windows',
-        title: 'Windows (32, 64)',
+        title: 'Windows',
         primary: false,
     },
     {
@@ -69,25 +69,59 @@ export default () => (
                             <img src="/static/img/desktop.png" alt="Buttercup"/>
                         </figure>
                     </div>
-                    <div className="column content">
+                    <div className="column">
                         <h3 className="title is-3">Buttercup <em className="has-text-weight-light">for</em> Desktop</h3>
                         <h5 className="subtitle is-5">macOS, Linux, Windows</h5>
 
-                        <p>Buttercup for desktop is a beautifully-simple password manager designed to help manage your credentials. Buttercup uses very strong encryption to protect your sensitive details under a single master password - Feel free to use stronger and more complex passwords for each service and let Buttercup store them securely.</p>
-                        <p>Buttercup is free to download and use and is available for Windows, Mac and Linux. Use it alongside the browser extension and mobile app for a completely portable experience.</p>
+                        <div className="content">
+                            <p>Buttercup for desktop is a beautifully-simple password manager designed to help manage your credentials. Buttercup uses very strong encryption to protect your sensitive details under a single master password - Feel free to use stronger and more complex passwords for each service and let Buttercup store them securely.</p>
+                            <p>Buttercup is free to download and use and is available for Windows, Mac and Linux. Use it alongside the browser extension and mobile app for a completely portable experience.</p>
+                        </div>
+                        <div className="field is-grouped">
                         {
                             desktopDownloads.map(dl => (
-                                <span>
-                                    <a className={cx('button', dl.primary ? 'is-primary' : '')}>
-                                        <span className="icon">
-                                            <i className={cx('fa', `fa-${dl.icon}`)}></i>
-                                        </span>
-                                        <span>{dl.title}</span>
-                                    </a>
-                                    {' '}
-                                </span>
+                                <a className={cx('button', dl.primary ? 'is-primary' : '')}>
+                                    <span className="icon">
+                                        <i className={cx('fa', `fa-${dl.icon}`)}></i>
+                                    </span>
+                                    <span>{dl.title}</span>
+                                </a>
                             ))
                         }
+                        </div>
+                        <div className="content is-small">
+                        <p>
+                            Alternatively, using Homebrew: <code>$ brew cask install buttercup</code><br/>
+                            Latest: <LatestVersion/>. <a href="https://github.com/buttercup/buttercup-desktop/releases" rel="noopener" target="_blank">Releases Page</a>.
+                        </p>
+                </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+        <section className="section section-mobile">
+            <div className="container">
+                <section className="columns is-vcentered">
+                    <div className="column">
+                        <h3 className="title is-3">Buttercup <em className="has-text-weight-light">for</em> Mobile</h3>
+                        <h5 className="subtitle is-5">iOS, Android</h5>
+
+                        <div className="content">
+                        <p>Buttercup is available for iOS and Android devices as a free app. Access the same archives you use in the desktop application and browser extension wherever you are. Updates to your archive and credentials can be seen on all of your devices.</p>
+                        </div>
+                        <div className="store-links">
+                            <a href="#">
+                                <img src="/static/img/appstore.svg" alt="Availble on App Store"/>
+                            </a>
+                            <a href="#">
+                                <img src="/static/img/googleplay.svg" alt="Availble on Google Play Store"/>
+                            </a>
+                        </div>
+                    </div>
+                    <div className="column">
+                        <figure className="image">
+                            <img src="/static/img/mobile.png" alt="Buttercup"/>
+                        </figure>
                     </div>
                 </section>
             </div>
