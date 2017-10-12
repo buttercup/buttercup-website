@@ -1,4 +1,5 @@
 import 'es6-promise/auto';
+import cx from 'classnames';
 import Page from '../components/page';
 import LatestVersion from '../components/version';
 import { isFirefox, isLinux } from '../utils/platform';
@@ -6,15 +7,18 @@ import { isFirefox, isLinux } from '../utils/platform';
 const desktopDownloads = [
     {
         icon: 'apple',
-        title: 'macOS'
+        title: 'macOS',
+        primary: true,
     },
     {
         icon: 'windows',
-        title: 'Windows (32, 64)'
+        title: 'Windows (32, 64)',
+        primary: false,
     },
     {
         icon: 'linux',
-        title: 'Linux'
+        title: 'Linux',
+        primary: false
     }
 ];
 
@@ -71,15 +75,17 @@ export default () => (
 
                         <p>Buttercup for desktop is a beautifully-simple password manager designed to help manage your credentials. Buttercup uses very strong encryption to protect your sensitive details under a single master password - Feel free to use stronger and more complex passwords for each service and let Buttercup store them securely.</p>
                         <p>Buttercup is free to download and use and is available for Windows, Mac and Linux. Use it alongside the browser extension and mobile app for a completely portable experience.</p>
-                        <h5>Download for:</h5>
                         {
                             desktopDownloads.map(dl => (
-                                <a className="button">
-                                    <span className="icon">
-                                        <i className={['fa', `fa-${dl.icon}`].join(' ')}></i>
-                                    </span>
-                                    <span>{dl.title}</span>
-                                </a>
+                                <span>
+                                    <a className={cx('button', dl.primary ? 'is-primary' : '')}>
+                                        <span className="icon">
+                                            <i className={cx('fa', `fa-${dl.icon}`)}></i>
+                                        </span>
+                                        <span>{dl.title}</span>
+                                    </a>
+                                    {' '}
+                                </span>
                             ))
                         }
                     </div>

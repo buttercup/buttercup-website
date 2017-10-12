@@ -29,11 +29,12 @@
     "grunt-postcss": "^0.8.0",
     "grunt-sass": "^2.0.0",
     "load-grunt-tasks": "^3.5.2",
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4",
     "unfetch": "^2.1.1"
   },
   "dependencies": {
-    "next": "^3.2.2"
+    "classnames": "^2.2.5",
+    "next": "^4.0.3",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
   }
 }
