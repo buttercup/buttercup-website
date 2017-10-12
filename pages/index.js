@@ -1,10 +1,22 @@
 import 'es6-promise/auto';
-import LockOutlineIcon from 'mdi-react/LockOutlineIcon';
-import CubeSendIcon from 'mdi-react/CubeSendIcon';
-import CreditCardOffIcon from 'mdi-react/CreditCardOffIcon';
 import Page from '../components/page';
 import LatestVersion from '../components/version';
 import { isFirefox, isLinux } from '../utils/platform';
+
+const desktopDownloads = [
+    {
+        icon: 'apple',
+        title: 'macOS'
+    },
+    {
+        icon: 'windows',
+        title: 'Windows (32, 64)'
+    },
+    {
+        icon: 'linux',
+        title: 'Linux'
+    }
+];
 
 export default () => (
     <Page>
@@ -22,21 +34,21 @@ export default () => (
                     <section className="columns">
                         <div className="column has-text-centered">
                             <span className="icon is-large">
-                                <LockOutlineIcon className="mdi-48px" width="48" height="48"/>
+                                <span className="fa fa-lock fa-3x"></span>
                             </span>
                             <h4 className="title is-4">Secure</h4>
                             <p className="subtitle">Strong 256bit AES encrypted archives that meet today's security standards. Rest assured that your credentials are safe.</p>
                         </div>
                         <div className="column has-text-centered">
                             <span className="icon is-large">
-                                <CubeSendIcon className="mdi-48px" width="48" height="48"/>
+                                <span className="fa fa-hand-pointer-o fa-3x"></span>
                             </span>
                             <h4 className="title is-4">Simple</h4>
                             <p className="subtitle">Easy-to-use interfaces with basic concepts make storing and finding your login details a piece of cake.</p>
                         </div>
                         <div className="column has-text-centered">
                             <span className="icon is-large">
-                                <CreditCardOffIcon className="mdi-48px" width="48" height="48"/>
+                                <span className="fa fa-money fa-3x"></span>
                             </span>
                             <h4 className="title is-4">Free</h4>
                             <p className="subtitle">Buttercup's software is free to download and use, forever. It's also available for all major platforms.</p>
@@ -53,12 +65,23 @@ export default () => (
                             <img src="/static/img/desktop.png" alt="Buttercup"/>
                         </figure>
                     </div>
-                    <div className="column">
+                    <div className="column content">
                         <h3 className="title is-3">Buttercup <em className="has-text-weight-light">for</em> Desktop</h3>
                         <h5 className="subtitle is-5">macOS, Linux, Windows</h5>
 
                         <p>Buttercup for desktop is a beautifully-simple password manager designed to help manage your credentials. Buttercup uses very strong encryption to protect your sensitive details under a single master password - Feel free to use stronger and more complex passwords for each service and let Buttercup store them securely.</p>
                         <p>Buttercup is free to download and use and is available for Windows, Mac and Linux. Use it alongside the browser extension and mobile app for a completely portable experience.</p>
+                        <h5>Download for:</h5>
+                        {
+                            desktopDownloads.map(dl => (
+                                <a className="button">
+                                    <span className="icon">
+                                        <i className={['fa', `fa-${dl.icon}`].join(' ')}></i>
+                                    </span>
+                                    <span>{dl.title}</span>
+                                </a>
+                            ))
+                        }
                     </div>
                 </section>
             </div>
