@@ -107,7 +107,8 @@ export default () => (
                         <h5 className="subtitle is-5">iOS, Android</h5>
 
                         <div className="content">
-                        <p>Buttercup is available for iOS and Android devices as a free app. Access the same archives you use in the desktop application and browser extension wherever you are. Updates to your archive and credentials can be seen on all of your devices.</p>
+                        <p>Take your login credentials wherever you go by installing the free iOS or Android app on your phone. Buttercup mobile gives you access to the same archives you use on the desktop application and browser extension, so your newly added details can be seen on all of your devices.</p>
+                        <p>Buttercup’s mobile applications employ similar safety techniques to banking applications, such as auto-lock and a security overlay when the app is minimized.</p>
                         </div>
                         <div className="store-links">
                             <a href="#">
