@@ -29,20 +29,26 @@ _paq.push(['enableLinkTracking']);
 `;
 
 export default ({ title, children }) => (
-    <div>
-        <Head>
-            <title>{title ? `${title} - Buttercup` : 'Buttercup'}</title>
-            <link rel="icon" href="/static/img/buttercup.ico" />
-            <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width" />
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-            <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" />
-            <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/heflipieckodmcppbnembejjmabajjjj" />
-            <link rel="stylesheet" href="/static/style.css" type="text/css" />
-            <script dangerouslySetInnerHTML={{__html: GA_CODE}}></script>
-            <script dangerouslySetInnerHTML={{__html: PIWIK_CODE}}></script>
-        </Head>
-        <Header/>
-        {children}
-        <Footer/>
-    </div>
+  <div>
+    <Head>
+      <title>{title ? `${title} - Buttercup` : 'Buttercup'}</title>
+      <link rel="icon" href="/static/img/buttercup.ico" />
+      <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width" />
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      />
+      <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" />
+      <link
+        rel="chrome-webstore-item"
+        href="https://chrome.google.com/webstore/detail/heflipieckodmcppbnembejjmabajjjj"
+      />
+      <link rel="stylesheet" href="/static/style.css" type="text/css" />
+      <script dangerouslySetInnerHTML={{ __html: GA_CODE }} />
+      <script dangerouslySetInnerHTML={{ __html: PIWIK_CODE }} />
+    </Head>
+    <Header />
+    {children}
+    <Footer />
+  </div>
 );
