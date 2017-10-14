@@ -190,7 +190,13 @@ export default () => (
                                 <span className="fa fa-safari fa-3x"></span>
                             </span>
                             <p className="title is-5">More Browsers</p>
-                            <a href="#" className="button is-light is-block">Check our Roadmap</a>
+                            <a
+                                href="https://github.com/buttercup/roadmap"
+                                target="_blank"
+                                className="button is-light is-block"
+                            >
+                                Check our Roadmap
+                            </a>
                         </div>
                     </div>
                 </section>
