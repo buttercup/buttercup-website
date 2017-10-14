@@ -31,7 +31,7 @@ export default () => (
             <a className="navbar-item " href="/">
               Home
             </a>
-            <a className="navbar-item " href="/privacy/">
+            <a className="navbar-item " href="/privacy">
               Privacy Policy
             </a>
           </div>
