@@ -18,19 +18,29 @@ function getGithubDownloadLink(fileName, version) {
 
 export default class extends Component {
   static async getInitialProps({ req }) {
-    const userAgent = req ? req.headers['user-agent'] : navigator.userAgent;
+    let userAgent = '';
+    try {
+      userAgent = req ? req.headers['user-agent'] : navigator.userAgent;
+    } catch (err) {}
     return { userAgent };
   }
 
   constructor(props) {
     super(props);
-    const ua = parseUA(props.userAgent);
+    this.state = {
+      version: null,
+      desktopDownloads: [],
+      browserDownloads: []
+    };
+  }
+
+  componentDidMount() {
+    const ua = parseUA(this.props.userAgent);
     const isChrome = ua.browser.name === 'Chrome';
     const isFirefox = ua.browser.name === 'Firefox';
     const isLinux = ua.os.name !== 'Mac OS' && ua.os.name !== 'Windows';
 
-    this.state = {
-      version: null,
+    this.setState({
       desktopDownloads: [
         {
           icon: 'apple',
@@ -83,14 +93,11 @@ export default class extends Component {
           }
         }
       ]
-    };
-  }
+    });
 
-  componentDidMount() {
     fetch('https://api.github.com/repos/buttercup/buttercup-desktop/tags')
       .then(res => res.json())
       .then(res => {
-        console.log(res[0].name);
         this.setState({
           version: res[0].name
         });
@@ -259,7 +266,7 @@ export default class extends Component {
                       href="#"
                       target="_blank"
                       onClick={dl.onClick}
-                      className={cx('button', 'is-light', 'is-block', dl.primary ? 'is-primary' : '')}
+                      className={cx('button', 'is-block', `is-${dl.primary ? 'primary' : 'light'}`)}
                     >
                       <span className="icon is-small">
                         <i className="fa fa-puzzle-piece" />
