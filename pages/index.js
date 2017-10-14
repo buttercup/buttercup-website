@@ -1,8 +1,8 @@
 import { Component } from 'react';
 import 'es6-promise/auto';
+import fetch from 'unfetch';
 import cx from 'classnames';
 import Page from '../components/page';
-import LatestVersion from '../components/version';
 import { parseUA } from '../utils/platform';
 import {
   installChromeExtension,
@@ -10,6 +10,11 @@ import {
   chromeExtensionUrl,
   firefoxExtensionUrl
 } from '../utils/extensions';
+
+function getGithubDownloadLink(fileName, version) {
+  fileName = fileName.replace('{version}', version.substr(1));
+  return `https://github.com/buttercup/buttercup-desktop/releases/download/${version}/${fileName}`;
+}
 
 export default class extends Component {
   static async getInitialProps({ req }) {
@@ -22,24 +27,34 @@ export default class extends Component {
     const ua = parseUA(props.userAgent);
     const isChrome = ua.browser.name === 'Chrome';
     const isFirefox = ua.browser.name === 'Firefox';
+    const isLinux = ua.os.name !== 'Mac OS' && ua.os.name !== 'Windows';
 
     this.state = {
-      userAgent: props.userAgent,
+      version: null,
       desktopDownloads: [
         {
           icon: 'apple',
           title: 'macOS',
-          primary: ua.os.name === 'Mac OS'
+          primary: ua.os.name === 'Mac OS',
+          fileName: 'Buttercup-{version}.dmg'
         },
         {
           icon: 'windows',
           title: 'Windows',
-          primary: ua.os.name === 'Windows'
+          primary: ua.os.name === 'Windows',
+          fileName: 'buttercup-setup-{version}.exe'
         },
         {
           icon: 'linux',
-          title: 'Linux',
-          primary: ua.os.name !== 'Mac OS' && ua.os.name !== 'Windows'
+          title: 'Linux .deb',
+          primary: isLinux,
+          fileName: 'buttercup_{version}_amd64.deb'
+        },
+        {
+          icon: 'linux',
+          title: 'Linux .rpm',
+          primary: isLinux,
+          fileName: 'buttercup-{version}.x86_64.rpm'
         }
       ],
       browserDownloads: [
@@ -69,6 +84,17 @@ export default class extends Component {
         }
       ]
     };
+  }
+
+  componentDidMount() {
+    fetch('https://api.github.com/repos/buttercup/buttercup-desktop/tags')
+      .then(res => res.json())
+      .then(res => {
+        console.log(res[0].name);
+        this.setState({
+          version: res[0].name
+        });
+      });
   }
 
   render() {
@@ -147,20 +173,25 @@ export default class extends Component {
                   </p>
                 </div>
                 <div className="field is-grouped">
-                  {this.state.desktopDownloads.map((dl, i) => (
-                    <a key={i} className={cx('button', dl.primary ? 'is-primary' : '')}>
-                      <span className="icon">
-                        <i className={cx('fa', `fa-${dl.icon}`)} />
-                      </span>
-                      <span>{dl.title}</span>
-                    </a>
-                  ))}
+                  {this.state.version &&
+                    this.state.desktopDownloads.map((dl, i) => (
+                      <a
+                        key={i}
+                        className={cx('button', dl.primary ? 'is-primary' : '')}
+                        href={getGithubDownloadLink(dl.fileName, this.state.version)}
+                      >
+                        <span className="icon">
+                          <i className={cx('fa', `fa-${dl.icon}`)} />
+                        </span>
+                        <span>{dl.title}</span>
+                      </a>
+                    ))}
                 </div>
                 <div className="content is-small">
                   <p>
                     Alternatively, using Homebrew: <code>$ brew cask install buttercup</code>
                     <br />
-                    Latest: <LatestVersion />.{' '}
+                    Latest: <strong className="version">{this.state.version}</strong>.{' '}
                     <a href="https://github.com/buttercup/buttercup-desktop/releases" rel="noopener" target="_blank">
                       Releases Page
                     </a>.
