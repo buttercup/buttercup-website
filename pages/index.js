@@ -3,59 +3,74 @@ import 'es6-promise/auto';
 import cx from 'classnames';
 import Page from '../components/page';
 import LatestVersion from '../components/version';
-import { isFirefox, isChrome, isLinux, isMac, isWindows } from '../utils/platform';
-
-const desktopDownloads = [
-  {
-    icon: 'apple',
-    title: 'macOS',
-    primary: isMac
-  },
-  {
-    icon: 'windows',
-    title: 'Windows',
-    primary: isWindows
-  },
-  {
-    icon: 'linux',
-    title: 'Linux',
-    primary: isLinux
-  }
-];
-
-const browserDownloads = [
-  {
-    icon: 'chrome',
-    title: 'Google Chrome',
-    primary: isChrome,
-    onClick: e => {
-      e.preventDefault();
-      if (isChrome) {
-        return chrome.webstore.install();
-      }
-      window.open('https://chrome.google.com/webstore/detail/buttercup/heflipieckodmcppbnembejjmabajjjj?hl=en');
-    }
-  },
-  {
-    icon: 'firefox',
-    title: 'Mozilla Firefox',
-    primary: isFirefox,
-    onClick: e => {
-      e.preventDefault();
-      if (isFirefox) {
-        return InstallTrigger.install({
-          Buttercup: {
-            URL:
-              'https://addons.mozilla.org/firefox/downloads/latest/buttercup-pw/addon-795525-latest.xpi?src=dp-btn-primary'
-          }
-        });
-      }
-      window.open('https://addons.mozilla.org/en-US/firefox/addon/buttercup-pw/');
-    }
-  }
-];
+import { parseUA } from '../utils/platform';
+import {
+  installChromeExtension,
+  installFirefoxExtension,
+  chromeExtensionUrl,
+  firefoxExtensionUrl
+} from '../utils/extensions';
 
 export default class extends Component {
+  static async getInitialProps({ req }) {
+    const userAgent = req ? req.headers['user-agent'] : navigator.userAgent;
+    return { userAgent };
+  }
+
+  constructor(props) {
+    super(props);
+    const ua = parseUA(props.userAgent);
+    const isChrome = ua.browser.name === 'Chrome';
+    const isFirefox = ua.browser.name === 'Firefox';
+
+    this.state = {
+      userAgent: props.userAgent,
+      desktopDownloads: [
+        {
+          icon: 'apple',
+          title: 'macOS',
+          primary: ua.os.name === 'Mac OS'
+        },
+        {
+          icon: 'windows',
+          title: 'Windows',
+          primary: ua.os.name === 'Windows'
+        },
+        {
+          icon: 'linux',
+          title: 'Linux',
+          primary: ua.os.name !== 'Mac OS' && ua.os.name !== 'Windows'
+        }
+      ],
+      browserDownloads: [
+        {
+          icon: 'chrome',
+          title: 'Google Chrome',
+          primary: isChrome,
+          onClick: e => {
+            e.preventDefault();
+            if (isChrome) {
+              return installChromeExtension();
+            }
+            window.open(chromeExtensionUrl);
+          }
+        },
+        {
+          icon: 'firefox',
+          title: 'Mozilla Firefox',
+          primary: isFirefox,
+          onClick: e => {
+            e.preventDefault();
+            if (isFirefox) {
+              return installFirefoxExtension();
+            }
+            window.open(firefoxExtensionUrl);
+          }
+        }
+      ]
+    };
+  }
+
   render() {
     return (
       <Page>
@@ -132,7 +147,7 @@ export default class extends Component {
                   </p>
                 </div>
                 <div className="field is-grouped">
-                  {desktopDownloads.map((dl, i) => (
+                  {this.state.desktopDownloads.map((dl, i) => (
                     <a key={i} className={cx('button', dl.primary ? 'is-primary' : '')}>
                       <span className="icon">
                         <i className={cx('fa', `fa-${dl.icon}`)} />
@@ -202,7 +217,7 @@ export default class extends Component {
             </h3>
             <h5 className="subtitle is-5">Chrome, Firefox</h5>
             <section className="columns">
-              {browserDownloads.map((dl, i) => (
+              {this.state.browserDownloads.map((dl, i) => (
                 <div className="column" key={i}>
                   <div className="box">
                     <span className="icon is-large">

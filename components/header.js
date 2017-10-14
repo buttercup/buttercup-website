@@ -1,9 +1,3 @@
-import { isFirefox } from '../utils/platform';
-
-const extensionUrl = isFirefox
-  ? 'https://addons.mozilla.org/en-US/firefox/addon/buttercup-pw/'
-  : 'https://chrome.google.com/webstore/detail/buttercup/heflipieckodmcppbnembejjmabajjjj?hl=en';
-
 export default () => (
   <header>
     <nav className="navbar is-transparent has-shadow">
