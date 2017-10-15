@@ -1,2 +1,5 @@
-export const isFirefox = (typeof navigator !== 'undefined') && /firefox/i.test(navigator.userAgent);
-export const isLinux = (typeof navigator !== 'undefined') && /linux/i.test(navigator.platform);
+import parser from 'ua-parser-js';
+
+export function parseUA(uaStr) {
+  return parser(uaStr);
+}

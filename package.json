@@ -6,6 +6,7 @@
     "dev": "grunt next && next",
     "build": "grunt next && next build && next export",
     "start": "next start",
+    "format": "prettier --write '{components,pages,utils}/**/*.js'",
     "deploy": "rsync -az --force --delete --progress ./out/ root@buttercup.pw:/usr/share/nginx/html/buttercup"
   },
   "repository": {
@@ -19,7 +20,7 @@
   "homepage": "https://github.com/buttercup/buttercup-website#readme",
   "devDependencies": {
     "autoprefixer": "^6.5.3",
-    "bulma": "^0.3.1",
+    "bulma": "^0.6.0",
     "es6-promise": "^4.0.5",
     "flightplan": "^0.6.15",
     "grunt": "^1.0.1",
@@ -29,11 +30,14 @@
     "grunt-postcss": "^0.8.0",
     "grunt-sass": "^2.0.0",
     "load-grunt-tasks": "^3.5.2",
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4",
+    "prettier": "^1.7.4",
+    "ua-parser-js": "^0.7.17",
     "unfetch": "^2.1.1"
   },
   "dependencies": {
-    "next": "^3.2.2"
+    "classnames": "^2.2.5",
+    "next": "^4.0.3",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
   }
 }
