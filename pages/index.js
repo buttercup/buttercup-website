@@ -235,9 +235,6 @@ export default class extends Component {
                   >
                     <img src="/static/img/appstore.svg" alt="Availble on App Store" />
                   </a>
-                  {/*<a href="#">
-                                    <img src="/static/img/googleplay.svg" alt="Availble on Google Play Store"/>
-                                </a>*/}
                 </div>
               </div>
               <div className="column">

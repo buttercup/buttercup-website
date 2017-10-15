@@ -1,41 +1,39 @@
 // Variables
-$family-sans-serif: "PT Sans";
-// $size-6: 15px;
-
-$primary: #00B7AC;
+$family-sans-serif: 'PT Sans';
+$primary: #00b7ac;
 
 // Imports
-@import "../node_modules/bulma/bulma";
+@import '../node_modules/bulma/bulma';
 
 .hero {
-    border-bottom: 1px solid $white-ter;
-    
-    .title {
-        margin-top: 1.5rem;
-    }
+  border-bottom: 1px solid $white-ter;
+
+  .title {
+    margin-top: 1.5rem;
+  }
 }
 
 .is-grouped > .button {
-    margin-right: .5rem;
+  margin-right: 0.5rem;
 }
 
 .store-links {
-    > a {
-        display: inline-block;
-        margin-right: .5rem;
+  > a {
+    display: inline-block;
+    margin-right: 0.5rem;
 
-        img {
-            display: block;
-        }
+    img {
+      display: block;
     }
+  }
 }
 
 .section-mobile {
-    background-color: $white-ter;
+  background-color: $white-ter;
 }
 
 .section-browsers {
-    .title {
-        margin-top: 1rem;
-    }
+  .title {
+    margin-top: 1rem;
+  }
 }
