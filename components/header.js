@@ -13,7 +13,7 @@ export default () => (
             </span>
           </a>
 
-          <a className="navbar-item is-hidden-desktop" href="https://twitter.com/buttercup" target="_blank">
+          <a className="navbar-item is-hidden-desktop" href="https://twitter.com/buttercup_pw" target="_blank">
             <span className="icon">
               <i className="fa fa-lg fa-twitter" />
             </span>
@@ -42,7 +42,7 @@ export default () => (
                 <i className="fa fa-lg fa-github" />
               </span>
             </a>
-            <a className="navbar-item is-hidden-desktop-only" href="https://twitter.com/buttercup" target="_blank">
+            <a className="navbar-item is-hidden-desktop-only" href="https://twitter.com/buttercup_pw" target="_blank">
               <span className="icon">
                 <i className="fa fa-lg fa-twitter" />
               </span>
