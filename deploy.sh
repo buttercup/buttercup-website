@@ -11,3 +11,5 @@ set -x
 
 npm run build
 npm run deploy
+
+rm ~/.ssh/id_rsa
