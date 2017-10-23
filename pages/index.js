@@ -52,19 +52,19 @@ export default class extends Component {
           icon: 'windows',
           title: 'Windows',
           primary: ua.os.name === 'Windows',
-          fileName: 'buttercup-setup-{version}.exe'
+          fileName: 'buttercup-desktop-setup-{version}.exe'
         },
         {
           icon: 'linux',
           title: 'Linux .deb',
           primary: isLinux,
-          fileName: 'buttercup_{version}_amd64.deb'
+          fileName: 'buttercup-desktop_{version}_amd64.deb'
         },
         {
           icon: 'linux',
           title: 'Linux .rpm',
           primary: isLinux,
-          fileName: 'buttercup-{version}.x86_64.rpm'
+          fileName: 'buttercup-desktop-{version}.x86_64.rpm'
         }
       ],
       browserDownloads: [
