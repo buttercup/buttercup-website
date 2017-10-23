@@ -9,7 +9,6 @@ chmod 600 ~/.ssh/id_rsa
 
 set -x
 
-npm run build
 npm run deploy
 
 rm ~/.ssh/id_rsa
