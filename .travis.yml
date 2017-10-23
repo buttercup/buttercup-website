@@ -1,3 +1,12 @@
+language: node_js
+
+node_js:
+  - 8
+
+branches:
+  only:
+  - master
+
 deploy:
   provider: script
   script: deploy.sh
