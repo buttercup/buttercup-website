@@ -6,6 +6,7 @@
     "dev": "grunt next && next",
     "build": "grunt next && next build && next export",
     "start": "next start",
+    "test": "npm run build",
     "format": "prettier --write '{components,pages,utils}/**/*.js'",
     "deploy": "rsync -az --force --delete --progress ./out/ root@buttercup.pw:/usr/share/nginx/html/buttercup"
   },
