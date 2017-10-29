@@ -235,6 +235,9 @@ export default class extends Component {
                   >
                     <img src="/static/img/appstore.svg" alt="Availble on App Store" />
                   </a>
+                  <a href="https://play.google.com/store/apps/details?id=com.buttercup&hl=en" target="_blank">
+                    <img src="/static/img/googleplay.svg" alt="Availble on Google Play Store" />
+                  </a>
                 </div>
               </div>
               <div className="column">
