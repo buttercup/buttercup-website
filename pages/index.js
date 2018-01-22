@@ -6,7 +6,6 @@ import Page from '../components/page';
 import { parseUA } from '../utils/platform';
 import {
   installChromeExtension,
-  installFirefoxExtension,
   chromeExtensionUrl,
   firefoxExtensionUrl
 } from '../utils/extensions';
@@ -86,9 +85,6 @@ export default class extends Component {
           primary: isFirefox,
           onClick: e => {
             e.preventDefault();
-            if (isFirefox) {
-              return installFirefoxExtension();
-            }
             window.open(firefoxExtensionUrl);
           }
         }
