@@ -281,7 +281,7 @@ export default class extends Component {
           <div className="container">
             <div className="hero-body">
               <a
-                class="embedly-card"
+                className="embedly-card"
                 data-card-controls="0"
                 data-card-theme="dark"
                 href="https://changelog.com/podcast/325"
