@@ -50,3 +50,12 @@ $primary: #00b7ac;
     margin-top: 1rem;
   }
 }
+
+.embedly-card, .embedly-card-hug {
+  width: 100% !important;
+  max-width: none !important;
+}
+
+.hero.is-podcast {
+  background-color: #111820;
+}

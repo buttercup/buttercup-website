@@ -51,5 +51,6 @@ export default ({ title, children }) => (
     <Header />
     {children}
     <Footer />
+    <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8" />
   </div>
 );

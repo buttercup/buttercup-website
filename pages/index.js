@@ -102,7 +102,6 @@ export default class extends Component {
         <section className="hero is-medium is-dark">
           <div className="container">
             <div className="hero-body has-text-centered">
-              {/* <h1 className="title is-1">Buttercup</h1> */}
               <img src="/static/img/buttercup-text.svg" alt="Buttercup" />
               <h2 className="subtitle is-3">The Password Manager You Deserve.</h2>
             </div>
@@ -276,6 +275,21 @@ export default class extends Component {
                 </div>
               </div>
             </section>
+          </div>
+        </section>
+        <section className="hero is-podcast">
+          <div className="container">
+            <div className="hero-body">
+              <a
+                class="embedly-card"
+                data-card-controls="0"
+                data-card-theme="dark"
+                href="https://changelog.com/podcast/325"
+              >
+                The Changelog #325: A good open source password manager? Inconceivable! with Buttercup co-creator, Perry
+                Mitchell
+              </a>
+            </div>
           </div>
         </section>
       </Page>
