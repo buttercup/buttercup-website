@@ -1,11 +1,12 @@
 import Head from 'next/head';
 import Header from './header';
 import Footer from './footer';
+import '../css/style.scss';
 
 const GA_CODE = `
 (function (i, s, o, g, r, a, m) {
 i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-    (i[r].q = i[r].q || []).push(arguments)        
+    (i[r].q = i[r].q || []).push(arguments)
 }, i[r].l = 1 * new Date(); a = s.createElement(o),
     m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
 })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
@@ -43,7 +44,6 @@ export default ({ title, children }) => (
         rel="chrome-webstore-item"
         href="https://chrome.google.com/webstore/detail/heflipieckodmcppbnembejjmabajjjj"
       />
-      <link rel="stylesheet" href="/static/style.css" type="text/css" />
       <script dangerouslySetInnerHTML={{ __html: GA_CODE }} />
       <script dangerouslySetInnerHTML={{ __html: PIWIK_CODE }} />
     </Head>
