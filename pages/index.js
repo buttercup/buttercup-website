@@ -99,7 +99,7 @@ export default class extends Component {
   render() {
     return (
       <Page>
-        <section className="hero is-primary is-medium is-bold">
+        <section className="hero is-medium is-dark">
           <div className="container">
             <div className="hero-body has-text-centered">
               <h1 className="title is-1">Buttercup</h1>
@@ -107,14 +107,12 @@ export default class extends Component {
             </div>
           </div>
         </section>
-        <section className="hero is-light">
+        <section className="hero is-light features">
           <div className="container">
             <div className="hero-body">
               <section className="columns has-text-centered">
                 <div className="column">
-                  <span className="icon is-large">
-                    <span className="fa fa-lock fa-3x" />
-                  </span>
+                  <img src="/static/img/secure.svg" alt="Secure" />
                   <h4 className="title is-4">Secure</h4>
                   <p className="subtitle">
                     Strong 256bit AES encrypted vaults that meet today's security standards. Rest assured that your
@@ -122,9 +120,7 @@ export default class extends Component {
                   </p>
                 </div>
                 <div className="column">
-                  <span className="icon is-large">
-                    <span className="fa fa-hand-pointer-o fa-3x" />
-                  </span>
+                  <img src="/static/img/simple.svg" alt="Simp`le" />
                   <h4 className="title is-4">Simple</h4>
                   <p className="subtitle">
                     Easy-to-use interfaces with basic concepts make storing and finding your login details a piece of
@@ -132,9 +128,7 @@ export default class extends Component {
                   </p>
                 </div>
                 <div className="column">
-                  <span className="icon is-large">
-                    <span className="fa fa-money fa-3x" />
-                  </span>
+                  <img src="/static/img/free.svg" alt="Free" />
                   <h4 className="title is-4">Free</h4>
                   <p className="subtitle">
                     Buttercup's software is free to download and use, forever. It's also available for all major

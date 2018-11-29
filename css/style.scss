@@ -1,15 +1,24 @@
 // Variables
-$family-sans-serif: 'PT Sans';
+$family-sans-serif: 'Inconsolata';
 $primary: #00b7ac;
 
 // Imports
 @import '../node_modules/bulma/bulma';
 
-.hero {
+.hero.is-medium {
+  background-color: #1F2124;
   border-bottom: 1px solid $white-ter;
 
   .title {
     margin-top: 1.5rem;
+    font-weight: 300;
+    color: #67D5B5;
+  }
+}
+
+.features {
+  img {
+    width: 150px;
   }
 }
 
