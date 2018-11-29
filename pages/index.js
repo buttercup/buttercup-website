@@ -277,7 +277,7 @@ export default class extends Component {
             </section>
           </div>
         </section>
-        <section className="hero is-podcast">
+        <section className="hero is-dark">
           <div className="container">
             <div className="hero-body">
               <a

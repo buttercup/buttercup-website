@@ -5,8 +5,11 @@ $primary: #00b7ac;
 // Imports
 @import '../node_modules/bulma/bulma';
 
+.hero.is-dark {
+  background-color: #111820;
+}
+
 .hero.is-medium {
-  background-color: #1F2124;
   border-bottom: 1px solid $white-ter;
 
   .title {
@@ -54,8 +57,4 @@ $primary: #00b7ac;
 .embedly-card, .embedly-card-hug {
   width: 100% !important;
   max-width: none !important;
-}
-
-.hero.is-podcast {
-  background-color: #111820;
 }
