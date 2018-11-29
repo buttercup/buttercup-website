@@ -4,11 +4,7 @@ import fetch from 'unfetch';
 import cx from 'classnames';
 import Page from '../components/page';
 import { parseUA } from '../utils/platform';
-import {
-  installChromeExtension,
-  chromeExtensionUrl,
-  firefoxExtensionUrl
-} from '../utils/extensions';
+import { installChromeExtension, chromeExtensionUrl, firefoxExtensionUrl } from '../utils/extensions';
 
 function getGithubDownloadLink(fileName, version) {
   fileName = fileName.replace('{version}', version.substr(1));
@@ -121,7 +117,7 @@ export default class extends Component {
                   </span>
                   <h4 className="title is-4">Secure</h4>
                   <p className="subtitle">
-                    Strong 256bit AES encrypted archives that meet today's security standards. Rest assured that your
+                    Strong 256bit AES encrypted vaults that meet today's security standards. Rest assured that your
                     credentials are safe.
                   </p>
                 </div>
@@ -197,7 +193,8 @@ export default class extends Component {
                     Latest: <strong className="version">{this.state.version}</strong>.{' '}
                     <a href="https://github.com/buttercup/buttercup-desktop/releases" rel="noopener" target="_blank">
                       Releases Page
-                    </a>.
+                    </a>
+                    .
                   </p>
                 </div>
               </div>
@@ -216,8 +213,8 @@ export default class extends Component {
                 <div className="content">
                   <p>
                     Take your login credentials wherever you go by installing the free iOS or Android app on your phone.
-                    Buttercup mobile gives you access to the same archives you use on the desktop application and
-                    browser extension, so your newly added details can be seen on all of your devices.
+                    Buttercup mobile gives you access to the same vaults you use on the desktop application and browser
+                    extension, so your newly added details can be seen on all of your devices.
                   </p>
                   <p>
                     Buttercup’s mobile applications employ similar safety techniques to banking applications, such as
