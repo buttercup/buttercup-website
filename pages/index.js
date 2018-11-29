@@ -102,7 +102,8 @@ export default class extends Component {
         <section className="hero is-medium is-dark">
           <div className="container">
             <div className="hero-body has-text-centered">
-              <h1 className="title is-1">Buttercup</h1>
+              {/* <h1 className="title is-1">Buttercup</h1> */}
+              <img src="/static/img/buttercup-text.svg" alt="Buttercup" />
               <h2 className="subtitle is-3">The Password Manager You Deserve.</h2>
             </div>
           </div>
