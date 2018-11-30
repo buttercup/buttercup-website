@@ -1,10 +1,10 @@
 {
   "name": "buttercup-website",
-  "version": "4.0.0",
+  "version": "4.1.0",
   "description": "Buttercup's Website",
   "scripts": {
-    "dev": "grunt next && next",
-    "build": "grunt next && next build && next export",
+    "dev": "next",
+    "build": "next build && next export",
     "start": "next start",
     "test": "npm run build",
     "format": "prettier --write '{components,pages,utils}/**/*.js'",
@@ -20,25 +20,18 @@
   },
   "homepage": "https://github.com/buttercup/buttercup-website#readme",
   "devDependencies": {
-    "autoprefixer": "^6.5.3",
-    "bulma": "^0.6.0",
+    "bulma": "^0.7.2",
     "es6-promise": "^4.0.5",
-    "flightplan": "^0.6.15",
-    "grunt": "^1.0.1",
-    "grunt-contrib-connect": "^1.0.2",
-    "grunt-contrib-copy": "^1.0.0",
-    "grunt-contrib-watch": "^1.0.0",
-    "grunt-postcss": "^0.8.0",
-    "grunt-sass": "^2.0.0",
-    "load-grunt-tasks": "^3.5.2",
-    "prettier": "^1.7.4",
+    "prettier": "^1.15.2",
     "ua-parser-js": "^0.7.17",
-    "unfetch": "^2.1.1"
+    "unfetch": "^4.0.1"
   },
   "dependencies": {
+    "@zeit/next-sass": "^1.0.1",
     "classnames": "^2.2.5",
-    "next": "^4.2.3",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0"
+    "next": "^7.0.2",
+    "node-sass": "^4.10.0",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2"
   }
 }

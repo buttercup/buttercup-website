@@ -1,15 +1,31 @@
 // Variables
-$family-sans-serif: 'PT Sans';
+$family-sans-serif: 'Inconsolata';
 $primary: #00b7ac;
 
 // Imports
 @import '../node_modules/bulma/bulma';
 
-.hero {
+.hero.is-dark {
+  background-color: #111820;
+}
+
+.hero.is-medium {
   border-bottom: 1px solid $white-ter;
 
   .title {
     margin-top: 1.5rem;
+    font-weight: 300;
+    color: #67D5B5;
+  }
+
+  img {
+    width: 13rem;
+  }
+}
+
+.features {
+  img {
+    width: 9rem;
   }
 }
 
@@ -36,4 +52,9 @@ $primary: #00b7ac;
   .title {
     margin-top: 1rem;
   }
+}
+
+.embedly-card, .embedly-card-hug {
+  width: 100% !important;
+  max-width: none !important;
 }

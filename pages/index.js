@@ -4,11 +4,7 @@ import fetch from 'unfetch';
 import cx from 'classnames';
 import Page from '../components/page';
 import { parseUA } from '../utils/platform';
-import {
-  installChromeExtension,
-  chromeExtensionUrl,
-  firefoxExtensionUrl
-} from '../utils/extensions';
+import { installChromeExtension, chromeExtensionUrl, firefoxExtensionUrl } from '../utils/extensions';
 
 function getGithubDownloadLink(fileName, version) {
   fileName = fileName.replace('{version}', version.substr(1));
@@ -103,32 +99,28 @@ export default class extends Component {
   render() {
     return (
       <Page>
-        <section className="hero is-primary is-medium is-bold">
+        <section className="hero is-medium is-dark">
           <div className="container">
             <div className="hero-body has-text-centered">
-              <h1 className="title is-1">Buttercup</h1>
+              <img src="/static/img/buttercup-text.svg" alt="Buttercup" />
               <h2 className="subtitle is-3">The Password Manager You Deserve.</h2>
             </div>
           </div>
         </section>
-        <section className="hero is-light">
+        <section className="hero is-light features">
           <div className="container">
             <div className="hero-body">
               <section className="columns has-text-centered">
                 <div className="column">
-                  <span className="icon is-large">
-                    <span className="fa fa-lock fa-3x" />
-                  </span>
+                  <img src="/static/img/secure.svg" alt="Secure" />
                   <h4 className="title is-4">Secure</h4>
                   <p className="subtitle">
-                    Strong 256bit AES encrypted archives that meet today's security standards. Rest assured that your
+                    Strong 256bit AES encrypted vaults that meet today's security standards. Rest assured that your
                     credentials are safe.
                   </p>
                 </div>
                 <div className="column">
-                  <span className="icon is-large">
-                    <span className="fa fa-hand-pointer-o fa-3x" />
-                  </span>
+                  <img src="/static/img/simple.svg" alt="Simp`le" />
                   <h4 className="title is-4">Simple</h4>
                   <p className="subtitle">
                     Easy-to-use interfaces with basic concepts make storing and finding your login details a piece of
@@ -136,9 +128,7 @@ export default class extends Component {
                   </p>
                 </div>
                 <div className="column">
-                  <span className="icon is-large">
-                    <span className="fa fa-money fa-3x" />
-                  </span>
+                  <img src="/static/img/free.svg" alt="Free" />
                   <h4 className="title is-4">Free</h4>
                   <p className="subtitle">
                     Buttercup's software is free to download and use, forever. It's also available for all major
@@ -197,7 +187,8 @@ export default class extends Component {
                     Latest: <strong className="version">{this.state.version}</strong>.{' '}
                     <a href="https://github.com/buttercup/buttercup-desktop/releases" rel="noopener" target="_blank">
                       Releases Page
-                    </a>.
+                    </a>
+                    .
                   </p>
                 </div>
               </div>
@@ -216,8 +207,8 @@ export default class extends Component {
                 <div className="content">
                   <p>
                     Take your login credentials wherever you go by installing the free iOS or Android app on your phone.
-                    Buttercup mobile gives you access to the same archives you use on the desktop application and
-                    browser extension, so your newly added details can be seen on all of your devices.
+                    Buttercup mobile gives you access to the same vaults you use on the desktop application and browser
+                    extension, so your newly added details can be seen on all of your devices.
                   </p>
                   <p>
                     Buttercup’s mobile applications employ similar safety techniques to banking applications, such as
@@ -284,6 +275,26 @@ export default class extends Component {
                 </div>
               </div>
             </section>
+          </div>
+        </section>
+        <section className="hero is-dark">
+          <div className="container">
+            <div className="hero-body">
+              <audio
+                data-theme="night"
+                data-src="https://changelog.com/podcast/325/embed"
+                src="https://cdn.changelog.com/uploads/podcast/325/the-changelog-325.mp3"
+                preload="none"
+                className="changelog-episode"
+                controls
+              />
+              <p>
+                <a href="https://changelog.com/podcast/325">
+                  The Changelog 325: A good open source password manager? Inconceivable!
+                </a>{' '}
+                – Listen on <a href="https://changelog.com/">Changelog.com</a>
+              </p>
+            </div>
           </div>
         </section>
       </Page>
