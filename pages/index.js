@@ -280,15 +280,20 @@ export default class extends Component {
         <section className="hero is-dark">
           <div className="container">
             <div className="hero-body">
-              <a
-                className="embedly-card"
-                data-card-controls="0"
-                data-card-theme="dark"
-                href="https://changelog.com/podcast/325"
-              >
-                The Changelog #325: A good open source password manager? Inconceivable! with Buttercup co-creator, Perry
-                Mitchell
-              </a>
+              <audio
+                data-theme="night"
+                data-src="https://changelog.com/podcast/325/embed"
+                src="https://cdn.changelog.com/uploads/podcast/325/the-changelog-325.mp3"
+                preload="none"
+                className="changelog-episode"
+                controls
+              />
+              <p>
+                <a href="https://changelog.com/podcast/325">
+                  The Changelog 325: A good open source password manager? Inconceivable!
+                </a>{' '}
+                – Listen on <a href="https://changelog.com/">Changelog.com</a>
+              </p>
             </div>
           </div>
         </section>
