@@ -29,8 +29,13 @@ $primary: #00b7ac;
   }
 }
 
+.field.is-grouped {
+  flex-wrap: wrap;
+}
+
 .is-grouped > .button {
   margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .store-links {
