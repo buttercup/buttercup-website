@@ -1,5 +1,11 @@
 import Link from 'next/link';
 
+// Toggles mobile hamburger menu
+const toggleMenu = () => {
+  const menu = document.getElementById('mainMenu')
+  menu.classList.toggle('is-active')
+}
+
 export default () => (
   <header>
     <nav className="navbar is-transparent has-shadow">
@@ -23,7 +29,7 @@ export default () => (
             </span>
           </a>
 
-          <div className="navbar-burger burger" data-target="mainMenu">
+          <div className="navbar-burger burger" data-target="mainMenu" onClick={() => toggleMenu()}>
             <span />
             <span />
             <span />
