@@ -8,7 +8,7 @@
     "start": "next start",
     "test": "npm run build",
     "format": "prettier --write '{components,pages,utils}/**/*.js'",
-    "deploy": "rsync -az --force --delete --progress ./out/ root@buttercup.pw:/usr/share/nginx/html/buttercup"
+    "deploy": "npm run build && aws s3 sync --acl public-read ./out/ s3://buttercup.pw/"
   },
   "repository": {
     "type": "git",

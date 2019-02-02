@@ -9,7 +9,7 @@ branches:
 
 deploy:
   provider: script
-  script: "./deploy.sh"
+  script: npm install && npm run deploy
   skip_cleanup: true
   on:
     branch: master
