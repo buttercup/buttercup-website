@@ -18,4 +18,5 @@ deploy:
   bucket: "buttercup.pw"
   skip_cleanup: true
   acl: public_read
+  local_dir: out
   region: eu-west-1
