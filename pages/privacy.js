@@ -47,7 +47,7 @@ export default () => (
             <h3>Using My Buttercup accounts and synchronisation</h3>
             <p>
               When using the hosted alternative, My Buttercup only stores the user’s email address and their
-              securely-hashed password (SHA-256). All other information is optional and not specific to the user.
+              securely-hashed password. All other information is optional and not specific to the user.
               Archives stored in the My Buttercup service are{' '}
               <u>already encrypted before they reach the My Buttercup servers</u> and are not accessible by anyone other
               than the user (with their password).
