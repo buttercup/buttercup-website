@@ -67,22 +67,13 @@ export default class extends Component {
           icon: 'chrome',
           title: 'Google Chrome',
           primary: isChrome,
-          onClick: e => {
-            e.preventDefault();
-            if (isChrome) {
-              return installChromeExtension();
-            }
-            window.open(chromeExtensionUrl);
-          }
+          href: chromeExtensionUrl
         },
         {
           icon: 'firefox',
           title: 'Mozilla Firefox',
           primary: isFirefox,
-          onClick: e => {
-            e.preventDefault();
-            window.open(firefoxExtensionUrl);
-          }
+          href: firefoxExtensionUrl
         }
       ]
     });
@@ -250,9 +241,8 @@ export default class extends Component {
                     </span>
                     <p className="title is-5">{dl.title}</p>
                     <a
-                      href="#"
+                      href={dl.href}
                       target="_blank"
-                      onClick={dl.onClick}
                       className={cx('button', 'is-block', `is-${dl.primary ? 'primary' : 'light'}`)}
                     >
                       <span className="icon is-small">
