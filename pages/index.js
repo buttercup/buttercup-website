@@ -47,7 +47,7 @@ export default class extends Component {
           icon: 'windows',
           title: 'Windows',
           primary: ua.os.name === 'Windows',
-          fileName: 'buttercup-desktop-setup-{version}.exe'
+          fileName: 'Buttercup-Setup-{version}.exe'
         },
         {
           icon: 'linux',
