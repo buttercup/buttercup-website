@@ -24,6 +24,7 @@ export default class extends Component {
     super(props);
     this.state = {
       version: null,
+      googleAuthenticated: false,
       desktopDownloads: [],
       browserDownloads: []
     };
@@ -85,11 +86,29 @@ export default class extends Component {
           version: res[0].name
         });
       });
+
+    if (typeof document !== 'undefined' && document.location.search.startsWith('?googleauth')) {
+      this.setState({
+        googleAuthenticated: true
+      });
+      fetch(`http://localhost:12822/${document.location.search}`).catch(e => {
+        console.error(e);
+      });
+    }
   }
 
   render() {
     return (
       <Page>
+        {this.state.googleAuthenticated && (
+          <div>
+            <article class="message is-success">
+              <div class="message-header">
+                <p>Authenticated. You can close this window now.</p>
+              </div>
+            </article>
+          </div>
+        )}
         <section className="hero is-medium is-dark">
           <div className="container">
             <div className="hero-body has-text-centered">
