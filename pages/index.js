@@ -87,13 +87,11 @@ export default class extends Component {
         });
       });
 
-    if (typeof document !== 'undefined' && document.location.search.startsWith('?googleauth')) {
+    if (typeof document !== 'undefined' && document.location.search.startsWith('?googledesktopauth')) {
       this.setState({
         googleAuthenticated: true
       });
-      fetch(`http://localhost:12822/${document.location.search}`).catch(e => {
-        console.error(e);
-      });
+      window.location = `buttercup://auth/google/callback${document.location.search}`;
     }
   }
 
