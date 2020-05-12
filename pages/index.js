@@ -128,7 +128,7 @@ export default class extends Component {
                   </p>
                 </div>
                 <div className="column">
-                  <img src="/static/img/simple.svg" alt="Simp`le" />
+                  <img src="/static/img/simple.svg" alt="Simple" />
                   <h4 className="title is-4">Simple</h4>
                   <p className="subtitle">
                     Easy-to-use interfaces with basic concepts make storing and finding your login details a piece of
