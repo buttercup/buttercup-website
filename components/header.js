@@ -57,6 +57,8 @@ export default () => (
                 <i className="fa fa-lg fa-twitter" />
               </span>
             </a>
+            <a className="navbar-item" href="https://my.buttercup.pw/login">Login</a>
+            <a className="navbar-item" href="https://my.buttercup.pw/register">Sign Up</a>
           </div>
         </div>
       </div>
