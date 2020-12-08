@@ -1,6 +1,6 @@
 import Page from '../components/page';
 
-export default () => (
+const Privacy = () => (
   <Page title="Privacy Policy">
     <section className="section">
       <div className="container">
@@ -47,10 +47,9 @@ export default () => (
             <h3>Using My Buttercup accounts and synchronisation</h3>
             <p>
               When using the hosted alternative, My Buttercup only stores the user’s email address and their
-              securely-hashed password. All other information is optional and not specific to the user.
-              Archives stored in the My Buttercup service are{' '}
-              <u>already encrypted before they reach the My Buttercup servers</u> and are not accessible by anyone other
-              than the user (with their password).
+              securely-hashed password. All other information is optional and not specific to the user. Archives stored
+              in the My Buttercup service are <u>already encrypted before they reach the My Buttercup servers</u> and
+              are not accessible by anyone other than the user (with their password).
             </p>
 
             <h2>Buttercup application data use</h2>
@@ -96,3 +95,5 @@ export default () => (
     </section>
   </Page>
 );
+
+export default Privacy;

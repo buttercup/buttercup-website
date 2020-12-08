@@ -1,7 +1,9 @@
-import Head from 'next/head';
-import Header from './header';
-import Footer from './footer';
 import '../css/style.scss';
+
+import Head from 'next/head';
+
+import Footer from './footer';
+import Header from './header';
 
 const GA_CODE = `
 (function (i, s, o, g, r, a, m) {
@@ -15,7 +17,7 @@ ga('create', 'UA-70971437-1', 'auto');
 ga('send', 'pageview');
 `;
 
-export default ({ title, children }) => (
+const Page = ({ title, children }) => (
   <div>
     <Head>
       <title>{title ? `${title} - Buttercup` : 'Buttercup'}</title>
@@ -39,3 +41,5 @@ export default ({ title, children }) => (
     <script async src="//cdn.changelog.com/embed.js" />
   </div>
 );
+
+export default Page;

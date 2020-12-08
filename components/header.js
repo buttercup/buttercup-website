@@ -2,11 +2,11 @@ import Link from 'next/link';
 
 // Toggles mobile hamburger menu
 const toggleMenu = () => {
-  const menu = document.getElementById('mainMenu')
-  menu.classList.toggle('is-active')
-}
+  const menu = document.getElementById('mainMenu');
+  menu.classList.toggle('is-active');
+};
 
-export default () => (
+const Header = () => (
   <header>
     <nav className="navbar is-transparent has-shadow">
       <div className="container">
@@ -57,11 +57,17 @@ export default () => (
                 <i className="fa fa-lg fa-twitter" />
               </span>
             </a>
-            <a className="navbar-item" href="https://my.buttercup.pw/login">Login</a>
-            <a className="navbar-item" href="https://my.buttercup.pw/register">Sign Up</a>
+            <a className="navbar-item" href="https://my.buttercup.pw/login">
+              Login
+            </a>
+            <a className="navbar-item" href="https://my.buttercup.pw/register">
+              Sign Up
+            </a>
           </div>
         </div>
       </div>
     </nav>
   </header>
 );
+
+export default Header;

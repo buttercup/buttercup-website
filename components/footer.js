@@ -1,4 +1,4 @@
-export default () => (
+const Footer = () => (
   <footer className="footer">
     <div className="container">
       <div className="content has-text-centered">
@@ -17,3 +17,5 @@ export default () => (
     </div>
   </footer>
 );
+
+export default Footer;

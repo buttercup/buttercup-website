@@ -1,10 +1,12 @@
-import { Component } from 'react';
 import 'es6-promise/auto';
-import fetch from 'unfetch';
+
 import cx from 'classnames';
+import { Component } from 'react';
+import fetch from 'unfetch';
+
 import Page from '../components/page';
+import { chromeExtensionUrl, firefoxExtensionUrl } from '../utils/extensions';
 import { parseUA } from '../utils/platform';
-import { installChromeExtension, chromeExtensionUrl, firefoxExtensionUrl } from '../utils/extensions';
 
 function getGithubDownloadLink(fileName, version) {
   fileName = fileName.replace('{version}', version.substr(1));
@@ -26,7 +28,7 @@ export default class extends Component {
       version: null,
       googleAuthenticated: false,
       desktopDownloads: [],
-      browserDownloads: []
+      browserDownloads: [],
     };
   }
 
@@ -42,54 +44,54 @@ export default class extends Component {
           icon: 'apple',
           title: 'macOS',
           primary: ua.os.name === 'Mac OS',
-          fileName: 'Buttercup-{version}.dmg'
+          fileName: 'Buttercup-{version}.dmg',
         },
         {
           icon: 'windows',
           title: 'Windows',
           primary: ua.os.name === 'Windows',
-          fileName: 'Buttercup-Setup-{version}.exe'
+          fileName: 'Buttercup-Setup-{version}.exe',
         },
         {
           icon: 'linux',
           title: 'Linux .deb',
           primary: isLinux,
-          fileName: 'buttercup-desktop_{version}_amd64.deb'
+          fileName: 'buttercup-desktop_{version}_amd64.deb',
         },
         {
           icon: 'linux',
           title: 'Linux .rpm',
           primary: isLinux,
-          fileName: 'buttercup-desktop-{version}.x86_64.rpm'
-        }
+          fileName: 'buttercup-desktop-{version}.x86_64.rpm',
+        },
       ],
       browserDownloads: [
         {
           icon: 'chrome',
           title: 'Google Chrome',
           primary: isChrome,
-          href: chromeExtensionUrl
+          href: chromeExtensionUrl,
         },
         {
           icon: 'firefox',
           title: 'Mozilla Firefox',
           primary: isFirefox,
-          href: firefoxExtensionUrl
-        }
-      ]
+          href: firefoxExtensionUrl,
+        },
+      ],
     });
 
     fetch('https://api.github.com/repos/buttercup/buttercup-desktop/tags')
-      .then(res => res.json())
-      .then(res => {
+      .then((res) => res.json())
+      .then((res) => {
         this.setState({
-          version: res[0].name
+          version: res[0].name,
         });
       });
 
     if (typeof document !== 'undefined' && document.location.search.startsWith('?googledesktopauth')) {
       this.setState({
-        googleAuthenticated: true
+        googleAuthenticated: true,
       });
       window.location = `buttercup://auth/google/callback${document.location.search}`;
     }
