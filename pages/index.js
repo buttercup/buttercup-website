@@ -265,7 +265,7 @@ export default class extends Component {
                       <span className="icon is-small">
                         <i className="fa fa-puzzle-piece" />
                       </span>
-                      <span>{dl.primary ? 'Install Now' : 'Checkout Extension'}</span>
+                      <span>{dl.primary ? 'Install Now' : 'Check Out Extension'}</span>
                     </a>
                   </div>
                 </div>
