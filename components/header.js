@@ -41,6 +41,7 @@ export default () => (
             <Link href="/">
               <a className="navbar-item">Home</a>
             </Link>
+            <a className="navbar-item" href="https://bcup.medium.com/" target="_blank">News</a>
             <Link href="/privacy">
               <a className="navbar-item">Privacy Policy</a>
             </Link>
