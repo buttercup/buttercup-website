@@ -42,25 +42,19 @@ export default class extends Component {
           icon: 'apple',
           title: 'macOS',
           primary: ua.os.name === 'Mac OS',
-          fileName: 'Buttercup-{version}.dmg'
+          fileName: 'Buttercup-mac-x64-{version}.dmg'
+        },
+        {
+          icon: 'linux',
+          title: "Linux (AppImage)",
+          primary: isLinux,
+          fileName: 'Buttercup-linux-x64-{version}.AppImage'
         },
         {
           icon: 'windows',
           title: 'Windows',
           primary: ua.os.name === 'Windows',
-          fileName: 'Buttercup-Setup-{version}.exe'
-        },
-        {
-          icon: 'linux',
-          title: 'Linux .deb',
-          primary: isLinux,
-          fileName: 'buttercup-desktop_{version}_amd64.deb'
-        },
-        {
-          icon: 'linux',
-          title: 'Linux .rpm',
-          primary: isLinux,
-          fileName: 'buttercup-desktop-{version}.x86_64.rpm'
+          fileName: 'Buttercup-win-x64-{version}-installer.exe'
         }
       ],
       browserDownloads: [
