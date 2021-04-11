@@ -184,7 +184,7 @@ export default class extends Component {
                 </div>
                 <div className="content is-small">
                   <p>
-                    Alternatively, using Homebrew: <code>$ brew cask install buttercup</code>
+                    Alternatively, using Homebrew: <code>$ brew install --cask buttercup</code>
                     <br />
                     Latest: <strong className="version">{this.state.version}</strong>.{' '}
                     <a href="https://github.com/buttercup/buttercup-desktop/releases" rel="noopener" target="_blank">
@@ -259,7 +259,7 @@ export default class extends Component {
                       <span className="icon is-small">
                         <i className="fa fa-puzzle-piece" />
                       </span>
-                      <span>{dl.primary ? 'Install Now' : 'Checkout Extension'}</span>
+                      <span>{dl.primary ? 'Install Now' : 'Check Out Extension'}</span>
                     </a>
                   </div>
                 </div>
