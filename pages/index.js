@@ -48,7 +48,7 @@ export default class extends Component {
           icon: 'linux',
           title: "Linux (AppImage)",
           primary: isLinux,
-          fileName: 'Buttercup-linux-x64-{version}.AppImage'
+          fileName: 'Buttercup-linux-x64.AppImage'
         },
         {
           icon: 'windows',
