@@ -4,7 +4,7 @@ import fetch from 'unfetch';
 import cx from 'classnames';
 import Page from '../components/page';
 import { parseUA } from '../utils/platform';
-import { installChromeExtension, chromeExtensionUrl, firefoxExtensionUrl } from '../utils/extensions';
+import { chromeExtensionUrl, firefoxExtensionUrl } from '../utils/extensions';
 
 function getGithubDownloadLink(fileName, version) {
   fileName = fileName.replace('{version}', version.substr(1));

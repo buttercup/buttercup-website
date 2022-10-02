@@ -1,7 +1,5 @@
 import Head from 'next/head';
 import Header from './header';
-// import Footer from './footer';
-import '../css/style.scss';
 
 export default ({ title, children }) => (
   <div>
@@ -18,6 +16,5 @@ export default ({ title, children }) => (
     </Head>
     <Header menu={false} />
     {children}
-    {/* <Footer /> */}
   </div>
 );

@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import Header from './header';
 import Footer from './footer';
-import '../css/style.scss';
 
 const GA_CODE = `
 (function (i, s, o, g, r, a, m) {
