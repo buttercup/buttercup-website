@@ -63,3 +63,21 @@ $primary: #00b7ac;
   width: 100% !important;
   max-width: none !important;
 }
+
+.navbar span.icon.svg {
+  background: hsl(0deg, 0%, 29%);
+  width: 24px;
+  height: 24px;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  display: inline-block;
+
+  &.svg-mastodon {
+    mask-image: url(/static/img/mastodon.svg);
+  }
+
+  &:hover {
+    background: hsl(229deg, 53%, 53%);
+    cursor: pointer;
+  }
+}
