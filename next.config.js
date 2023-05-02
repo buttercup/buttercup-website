@@ -6,5 +6,6 @@ module.exports = {
       '/auth/google': { page: '/auth/google' }
     };
   },
-  output: 'export'
+  output: 'export',
+  trailingSlash: true
 };
