@@ -13,10 +13,8 @@ export default ({
     <nav className="navbar is-transparent has-shadow">
       <div className="container">
         <div className="navbar-brand">
-          <Link href="/">
-            <a className="navbar-item">
-              <img src="/static/img/logo.svg" alt="Buttercup Logo" />
-            </a>
+          <Link href="/" className="navbar-item">
+            <img src="/static/img/logo.svg" alt="Buttercup Logo" />
           </Link>
 
           {menu && (
@@ -45,12 +43,12 @@ export default ({
         {menu && (
           <div id="mainMenu" className="navbar-menu">
             <div className="navbar-start">
-              <Link href="/">
-                <a className="navbar-item">Home</a>
+              <Link href="/" className="navbar-item">
+                Home
               </Link>
               <a className="navbar-item" href="https://bcup.medium.com/" target="_blank">News</a>
-              <Link href="/privacy">
-                <a className="navbar-item">Privacy Policy</a>
+              <Link href="/privacy" className="navbar-item">
+                Privacy Policy
               </Link>
             </div>
 
