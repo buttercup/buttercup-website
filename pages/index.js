@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import Script from 'next/script';
 import 'es6-promise/auto';
 import fetch from 'unfetch';
 import cx from 'classnames';
@@ -278,23 +279,49 @@ export default class extends Component {
             </section>
           </div>
         </section>
+        <section className="section section-awards">
+          <div className="container">
+            <section className="columns is-vcentered">
+              <div className="column">
+                <figure className="image">
+                  <a href="https://www.20i.com/foss-awards/winners" rel="noopener" target="_blank">
+                    <img src="/static/img/20i-2023-password-manager-winner-proper.svg" alt="Buttercup for Mobile Screenshot" />
+                  </a>
+                </figure>
+              </div>
+              <div className="column">
+                <h3 className="title is-3">
+                  Awarded
+                </h3>
+                <div className="content">
+                  <p>
+                    In June 2023 Buttercup won <a href="https://www.20i.com/" rel="noopener" target="_blank">20i</a>'s FOSS Awards in the category
+                    of Password Mangement. We were voted as the winning platform alongside some giants in the space. It goes without saying that
+                    we at Buttercup were extremely honoured by this and appreciate the chance to be recognised in the field we love.
+                  </p>
+                </div>
+              </div>
+            </section>
+          </div>
+        </section>
         <section className="hero is-dark">
           <div className="container">
             <div className="hero-body">
               <audio
                 data-theme="night"
                 data-src="https://changelog.com/podcast/325/embed"
-                src="https://cdn.changelog.com/uploads/podcast/325/the-changelog-325.mp3"
+                src="https://op3.dev/e/https://cdn.changelog.com/uploads/podcast/325/the-changelog-325.mp3"
                 preload="none"
                 className="changelog-episode"
                 controls
               />
               <p>
                 <a href="https://changelog.com/podcast/325">
-                  The Changelog 325: A good open source password manager? Inconceivable!
-                </a>{' '}
-                – Listen on <a href="https://changelog.com/">Changelog.com</a>
+                  Changelog Interviews 325: A good open source password manager? Inconceivable!
+                </a>
+                &nbsp;– Listen on <a href="https://changelog.com/">Changelog.com</a>
               </p>
+              <Script async src="//cdn.changelog.com/embed.js" />
             </div>
           </div>
         </section>

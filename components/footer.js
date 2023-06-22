@@ -4,14 +4,10 @@ export default () => (
       <div className="content has-text-centered">
         <p>
           <strong>Buttercup</strong> is made by{' '}
-          <a href="https://twitter.com/perry_mitchell" rel="noopener" target="_blank">
+          <a href="https://perrymitchell.net" rel="noopener" target="_blank">
             Perry Mitchell
           </a>{' '}
-          &{' '}
-          <a href="https://twitter.com/sallar" rel="noopener" target="_blank">
-            Sallar Kaboli
-          </a>{' '}
-          in Helsinki, Finland.
+          in Espoo, Finland.
         </p>
       </div>
     </div>

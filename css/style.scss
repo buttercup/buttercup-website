@@ -59,6 +59,20 @@ $primary: #00b7ac;
   }
 }
 
+.section-awards {
+  background-color: $white-ter;
+
+  figure.image {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    img {
+      max-width: 250px;
+    }
+  }
+}
+
 .embedly-card, .embedly-card-hug {
   width: 100% !important;
   max-width: none !important;
