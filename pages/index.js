@@ -5,7 +5,7 @@ import fetch from 'unfetch';
 import cx from 'classnames';
 import Page from '../components/page';
 import { parseUA } from '../utils/platform';
-import { chromeExtensionUrl, firefoxExtensionUrl } from '../utils/extensions';
+import { chromeExtensionUrl, edgeExtensionUrl, firefoxExtensionUrl } from '../utils/extensions';
 
 function getGithubDownloadLink(fileName, version) {
   fileName = fileName.replace('{version}', version.substr(1));
@@ -35,6 +35,7 @@ export default class extends Component {
     const ua = parseUA(this.props.userAgent);
     const isChrome = ua.browser.name === 'Chrome';
     const isFirefox = ua.browser.name === 'Firefox';
+    const isEdge = ua.browser.name === 'Edge';
     const isLinux = ua.os.name !== 'Mac OS' && ua.os.name !== 'Windows';
 
     this.setState({
@@ -70,6 +71,12 @@ export default class extends Component {
           title: 'Mozilla Firefox',
           primary: isFirefox,
           href: firefoxExtensionUrl
+        },
+        {
+          icon: 'edge',
+          title: 'Microsoft Edge',
+          primary: isEdge,
+          href: edgeExtensionUrl
         }
       ]
     });
@@ -152,7 +159,7 @@ export default class extends Component {
               </div>
               <div className="column">
                 <h3 className="title is-3">
-                  Buttercup <em className="has-text-weight-light">for</em> Desktop
+                  Buttercup <span className="has-text-weight-light">for</span> Desktop
                 </h3>
                 <h5 className="subtitle is-5">macOS, Linux, Windows</h5>
 
@@ -203,7 +210,7 @@ export default class extends Component {
             <section className="columns is-vcentered">
               <div className="column">
                 <h3 className="title is-3">
-                  Buttercup <em className="has-text-weight-light">for</em> Mobile
+                  Buttercup <span className="has-text-weight-light">for</span> Mobile
                 </h3>
                 <h5 className="subtitle is-5">iOS, Android</h5>
 
@@ -241,9 +248,9 @@ export default class extends Component {
         <section className="section section-browsers">
           <div className="container has-text-centered">
             <h3 className="title is-3">
-              Buttercup <em className="has-text-weight-light">for</em> Browsers
+              Buttercup <span className="has-text-weight-light">for</span> Browsers
             </h3>
-            <h5 className="subtitle is-5">Chrome, Firefox</h5>
+            <h5 className="subtitle is-5">Chrome, Firefox, Edge</h5>
             <section className="columns">
               {this.state.browserDownloads.map((dl, i) => (
                 <div className="column" key={i}>
