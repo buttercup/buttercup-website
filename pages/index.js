@@ -81,11 +81,11 @@ export default class extends Component {
       ]
     });
 
-    fetch('https://api.github.com/repos/buttercup/buttercup-desktop/tags')
+    fetch('https://api.github.com/repos/buttercup/buttercup-desktop/releases')
       .then(res => res.json())
       .then(res => {
         this.setState({
-          version: res[0].name
+          version: res[0].tag_name
         });
       });
 
