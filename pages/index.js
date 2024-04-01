@@ -117,7 +117,7 @@ export default class extends Component {
             </div>
           </div>
         </section>
-        <section className="hero is-light features">
+        <section className="hero is-light features" id="features">
           <div className="container">
             <div className="hero-body">
               <section className="columns has-text-centered">
@@ -149,7 +149,7 @@ export default class extends Component {
             </div>
           </div>
         </section>
-        <section className="section">
+        <section className="section section-desktop" id="desktop">
           <div className="container">
             <section className="columns is-vcentered">
               <div className="column">
@@ -205,7 +205,7 @@ export default class extends Component {
             </section>
           </div>
         </section>
-        <section className="section section-mobile">
+        <section className="section section-mobile" id="mobile">
           <div className="container">
             <section className="columns is-vcentered">
               <div className="column">
@@ -245,7 +245,7 @@ export default class extends Component {
             </section>
           </div>
         </section>
-        <section className="section section-browsers">
+        <section className="section section-browsers" id="browsers">
           <div className="container has-text-centered">
             <h3 className="title is-3">
               Buttercup <span className="has-text-weight-light">for</span> Browsers
@@ -284,9 +284,16 @@ export default class extends Component {
                 </div>
               </div>
             </section>
+            <div className="content">
+              <p>
+                Note: the extension <strong>requires the Buttercup desktop application version 2.26 or later</strong> be
+                installed <i>and</i> running, at least in the background. This browser addon uses an encrypted connection with the desktop application
+                to transfer vault credentials during login and saving. This addon cannot function without the desktop application.
+              </p>
+            </div>
           </div>
         </section>
-        <section className="section section-awards">
+        <section className="section section-awards" id="awards">
           <div className="container">
             <section className="columns is-vcentered">
               <div className="column">
